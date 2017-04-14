@@ -42,8 +42,7 @@ var padding = 10;
 
 var svg = d3.select("#educ").append("svg")
 .attr("height", height + 2 * padding)
-.attr("width", width + 2 * padding)
-.style("background", "#f2f2f2");
+.attr("width", width + 2 * padding);
 
 var educ_attain, states;
 var projection = d3.geoAlbersUsa().scale(75);
@@ -55,10 +54,8 @@ var buildPath = function(d, xScale, yScale){
 	for (var i = 2001; i < 2015; i++){
 		res += " " + xScale(i) + " " + yScale(d[i] + " ");
 	}
-	return res;
-	
+	return res;	
 }
-
 
 var plotEduc = function(){
 	var xScale = d3.scaleLinear().domain([2000, 2014]).range([padding*2+5, width-padding]);
@@ -81,6 +78,20 @@ var plotEduc = function(){
 	svg.append("g").attr("transform", "translate(0,390)").call(xAxis);
 	svg.append("g").attr("transform", "translate(25,0)").call(yAxis);
 
+	//Horizontal Dotted Lines
+	var y = 0;
+	while(y <= 55){
+		svg.append("line")
+		.attr("x1", xScale(2000))
+		.attr("y1", yScale(y))
+		.attr("x2", xScale(2014))
+		.attr("y2", yScale(y))
+		.attr("stroke-width", 1)
+		.attr("stroke", "black")
+		.attr("stroke-dasharray", "5, 10")
+		.attr("opacity", "0.2");
+		y += 5;
+	}
 };
 
 d3.csv("educattain.csv", function (error, data) {
@@ -90,6 +101,7 @@ d3.csv("educattain.csv", function (error, data) {
 	plotEduc();
 });
 
+//MAP STUFF
 d3.queue()
 .defer(d3.json, "us.json")
 .await(function (error, rawMap) {
