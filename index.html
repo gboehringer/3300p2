@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>INFO 3300 - Data-driven Web Applications</title>
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://d3js.org/topojson.v2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+</head>
+<body>
+
+<div>
+<p id = "educ"></p>
+</div>
+
+<script>
+var height = 500;
+var width = 500;
+var padding = 20;
+
+var svg = d3.select("#educ").append("svg")
+.attr("height", height + 2 * padding)
+.attr("width", width + 2 * padding)
+.style("background", "#f2f2f2");
+
+var educ_attain;
+var max_attain = 54.8;
+
+var buildPath = function(d, xScale, yScale){
+	var res = "M " + xScale(2000) + ' ' + yScale(d[2000]) + ' L ';
+	for (var i = 2001; i < 2015; i++){
+		res += " " + xScale(i) + " " + yScale(d[i] + " ");
+	}
+	return res;
+	
+}
+
+
+var plotEduc = function(){
+	var xScale = d3.scaleLinear().domain([2000, 2014]).range([padding*2, width-padding]);
+	var yScale = d3.scaleLinear().domain([max_attain, 0]).range([padding, height-padding]);
+
+	var paths = svg.selectAll("path").data(educ_attain);
+
+	//console.log(buildPath(educ_attain[0], xScale, yScale));
+	paths = paths.enter().append("path")
+	.attr("d", function (d) {return buildPath(d, xScale, yScale);})
+	.attr("fill", "none")
+	.attr("stroke", function(d) {if (d.state == "United States") return "red"; else return "black";})
+	.attr("stroke-width", 1.5)
+	.attr("opacity", 0.5)
+	.attr("id", function(d){return d.state})
+	.merge(paths);
+
+	var xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
+	var yAxis = d3.axisLeft(yScale);
+	svg.append("g").attr("transform", "translate(0,480)").call(xAxis);
+	svg.append("g").attr("transform", "translate(40,0)").call(yAxis);
+
+};
+
+d3.csv("educattain.csv", function (error, data) {
+	if (error) { console.log(error); }
+	
+	educ_attain = data;
+	plotEduc();
+});
+
+
+</script>
+
+
+
+
+</body>
+</html>
