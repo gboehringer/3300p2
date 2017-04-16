@@ -11,6 +11,11 @@
 </head>
 <style>
 svg { border: solid #ccc 1px; }
+
+.path.state :hover {
+  fill: red;
+}
+
 .main{
     width: 100%;
   }
@@ -33,10 +38,12 @@ svg { border: solid #ccc 1px; }
 	</div>
 </div>
 
-<input type="range" min="2001" max="2014" value="2001" step="1" oninput="showValue(this.value)" />
-<span id="range">2001</span>
+<input type="range" min="2000" max="2014" value="2000" step="1" oninput="showValue(this.value)" />
+<span id="range">2000</span>
 
 <p id = "tooltip"></p>
+
+
 
 
 
@@ -50,6 +57,10 @@ var svg = d3.select("#educ").append("svg")
 .attr("width", width + 2 * padding);
 
 var educ_attain, states;
+//dictionary relating to slider
+yearedu = {};
+//data for drugs in a specific year
+var drugs;
 var projection = d3.geoAlbersUsa().scale(75);
 var pathGenerator = d3.geoPath().projection(projection);
 var max_attain = 54.8;
@@ -98,14 +109,61 @@ var plotEduc = function(){
 		y += 5;
 	}
 
+    var line1 = 
+    svg.append("line")
+    .attr("x1", xScale(2000))
+    .attr("y1", padding)
+    .attr("x2", xScale(2000))
+    .attr("y2", height)
+    .attr("stroke-width", 1)
+    .attr("stroke", "blue")
+    .attr("opacity", "0.2")
+    .attr("class", "line2");
+
 
 };
+
+var updateeduc = function(year){
+
+    var xScale = d3.scaleLinear().domain([2000, 2014]).range([padding*2+5, width-padding]);
+
+
+    d3.selectAll(".line2")
+    .attr("x1", xScale(year))
+    .attr("x2", xScale(year))
+
+
+
+};
+
+var updatetool = function(state){
+
+    d3.selectAll(".")
+
+    d3.selectAll(".")
+
+    d3.selectAll(".")
+
+    d3.selectAll(".")
+
+    d3.selectAll(".")
+
+    d3.selectAll(".")
+
+
+
+
+
+}
+
+
+
 
 d3.csv("educattain.csv", function (error, data) {
 	if (error) { console.log(error); }
 	
 	educ_attain = data;
-	plotEduc();
+	plotEduc(2001);
 });
 
 //MAP STUFF
@@ -127,17 +185,23 @@ function showMap(placement) {
 	.merge(paths)
 	.transition().duration(1000)
 	.style("stroke", "grey")
-	.style("fill", "white")
+	.style("fill", "black")
 	.attr("d", function (state) {
 		return pathGenerator(state);
-	});
+	})
+    .attr("onclick", function(state){
+        console.log(state.id);
+        //updatetool();
+    });
 
 
 
 }
 
 
-var drugs;
+
+
+
 var year = [];
 d3.csv("drugs.csv", function (error, data) {
 	if (error) { console.log(error); }
@@ -146,7 +210,6 @@ d3.csv("drugs.csv", function (error, data) {
 	createTool();
 
 });
-
 
 
 
@@ -162,6 +225,26 @@ function showValue(newValue)
 		}
   	
 	});
+
+
+    yearedu = {};
+
+    educ_attain.forEach(function(d){
+        if(d.state == "United States"){
+            ;
+        }
+        else{
+
+            yearedu[d.state] = d[newValue]; 
+        }
+
+
+    });
+
+    updateeduc(newValue);
+
+
+
 
 
 }
@@ -198,7 +281,8 @@ function createTool(){
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("Georgia");
+    .text("Georgia")
+    .attr("class", "toolstate");
 
     svg2.append("text")
    	.attr("x", ((0 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
@@ -214,7 +298,8 @@ function createTool(){
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("2001");
+    .text("2001")
+    .attr("class", "toolyear");
 
      svg2.append("text")
    	.attr("x", ((1 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
@@ -230,7 +315,8 @@ function createTool(){
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("3");
+    .text("3")
+    .attr("class", "tooledurank");
 
 
     svg2.append("text")
@@ -247,7 +333,8 @@ function createTool(){
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("2");
+    .text("2")
+    .attr("class", "tooldrugrank");
 
 
      svg2.append("text")
@@ -265,7 +352,8 @@ function createTool(){
     .attr("font-weight", "normal")
     .attr("font-size", 20)
     .attr("fill", "red")
-    .text("20" + "%");
+    .text("20" + "%")
+    .attr("class", "tooleduperc");
 
      svg2.append("text")
    	.attr("x", ((4 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
@@ -282,7 +370,8 @@ function createTool(){
     .attr("font-weight", "normal")
     .attr("fill", "orange")
     .attr("font-size", 20)
-    .text("20" + "%");
+    .text("20" + "%")
+    .attr("class", "tooldrugperc");
 
 
     svg2.append("line")
