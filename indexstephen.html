@@ -138,17 +138,17 @@ var updateeduc = function(year){
 
 var updatetool = function(state){
 
-    d3.selectAll(".")
+    d3.selectAll(".toolstate")
 
-    d3.selectAll(".")
+    d3.selectAll(".toolyear")
 
-    d3.selectAll(".")
+    d3.selectAll(".tooledurank")
 
-    d3.selectAll(".")
+    d3.selectAll(".tooldrugrank")
 
-    d3.selectAll(".")
+    d3.selectAll(".tooleduperc")
 
-    d3.selectAll(".")
+    d3.selectAll(".tooldrugperc")
 
 
 
@@ -281,7 +281,6 @@ function createTool(){
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("Georgia")
     .attr("class", "toolstate");
 
     svg2.append("text")
@@ -298,7 +297,6 @@ function createTool(){
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("2001")
     .attr("class", "toolyear");
 
      svg2.append("text")
@@ -315,7 +313,6 @@ function createTool(){
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("3")
     .attr("class", "tooledurank");
 
 
@@ -333,7 +330,6 @@ function createTool(){
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("2")
     .attr("class", "tooldrugrank");
 
 
@@ -352,7 +348,6 @@ function createTool(){
     .attr("font-weight", "normal")
     .attr("font-size", 20)
     .attr("fill", "red")
-    .text("20" + "%")
     .attr("class", "tooleduperc");
 
      svg2.append("text")
@@ -370,7 +365,6 @@ function createTool(){
     .attr("font-weight", "normal")
     .attr("fill", "orange")
     .attr("font-size", 20)
-    .text("20" + "%")
     .attr("class", "tooldrugperc");
 
 
