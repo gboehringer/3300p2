@@ -148,9 +148,7 @@ function showMap(scale, placement) {
 	.style("stroke", "grey")
 	.attr("d", path)
 	.style("fill", function (s) {
-		console.log(s.id);
 		var statesDat = stateAt.get(s.id);
-		console.log(statesDat);
 		if(statesDat){
 			return(scale(statesDat.CrudeRate));
 		}
