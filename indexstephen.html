@@ -1,0 +1,348 @@
+<html>
+<head>
+<title>INFO 3300 - Data-driven Web Applications</title>
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://d3js.org/topojson.v2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+</head>
+<style>
+svg { border: solid #ccc 1px; }
+.main{
+    width: 100%;
+  }
+.left{
+	width: 60%;
+	float: left;
+}
+.right{
+	width: 40%;
+	float: right;
+}
+</style>
+<body>
+<div class = "main">
+	<div class = "left">
+	<svg id = "map" width = "700" height = "500"></svg>
+	</div>
+	<div class = "right">
+	<p id = "educ"></p>
+	</div>
+</div>
+
+<input type="range" min="2001" max="2014" value="2001" step="1" oninput="showValue(this.value)" />
+<span id="range">2001</span>
+
+<p id = "tooltip"></p>
+
+
+
+<script>
+var height = 400;
+var width = 450;
+var padding = 10;
+
+var svg = d3.select("#educ").append("svg")
+.attr("height", height + 2 * padding)
+.attr("width", width + 2 * padding);
+
+var educ_attain, states;
+var projection = d3.geoAlbersUsa().scale(75);
+var pathGenerator = d3.geoPath().projection(projection);
+var max_attain = 54.8;
+
+var buildPath = function(d, xScale, yScale){
+	var res = "M " + xScale(2000) + ' ' + yScale(d[2000]) + ' L ';
+	for (var i = 2001; i < 2015; i++){
+		res += " " + xScale(i) + " " + yScale(d[i] + " ");
+	}
+	return res;	
+}
+
+var plotEduc = function(){
+	var xScale = d3.scaleLinear().domain([2000, 2014]).range([padding*2+5, width-padding]);
+	var yScale = d3.scaleLinear().domain([max_attain, 0]).range([padding, height-padding]);
+
+	var paths = svg.selectAll("path").data(educ_attain);
+
+	//console.log(buildPath(educ_attain[0], xScale, yScale));
+	paths = paths.enter().append("path")
+	.attr("d", function (d) {return buildPath(d, xScale, yScale);})
+	.attr("fill", "none")
+	.attr("stroke", function(d) {if (d.state == "United States") return "red"; else return "black";})
+	.attr("stroke-width", 1.5)
+	.attr("opacity", 0.5)
+	.attr("id", function(d){return d.state})
+	.merge(paths);
+
+	var xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
+	var yAxis = d3.axisLeft(yScale);
+	svg.append("g").attr("transform", "translate(0,390)").call(xAxis);
+	svg.append("g").attr("transform", "translate(25,0)").call(yAxis);
+
+	//Horizontal Dotted Lines
+	var y = 0;
+	while(y <= 55){
+		svg.append("line")
+		.attr("x1", xScale(2000))
+		.attr("y1", yScale(y))
+		.attr("x2", xScale(2014))
+		.attr("y2", yScale(y))
+		.attr("stroke-width", 1)
+		.attr("stroke", "black")
+		.attr("stroke-dasharray", "5, 10")
+		.attr("opacity", "0.2");
+		y += 5;
+	}
+
+
+};
+
+d3.csv("educattain.csv", function (error, data) {
+	if (error) { console.log(error); }
+	
+	educ_attain = data;
+	plotEduc();
+});
+
+//MAP STUFF
+d3.queue()
+.defer(d3.json, "us.json")
+.await(function (error, rawMap) {
+	states = topojson.feature(rawMap, rawMap.objects.states);
+	showMap("#map");
+
+});
+
+function showMap(placement) {
+	var svg = d3.select(placement);
+	projection.fitExtent([[0,0], [svg.attr("width"), svg.attr("height")]], states);
+	pathGenerator = d3.geoPath().projection(projection);
+	
+	var paths = svg.selectAll("path.state").data(states.features);
+	paths.enter().append("path").attr("class", "state")
+	.merge(paths)
+	.transition().duration(1000)
+	.style("stroke", "grey")
+	.style("fill", "white")
+	.attr("d", function (state) {
+		return pathGenerator(state);
+	});
+
+
+
+}
+
+
+var drugs;
+var year = [];
+d3.csv("drugs.csv", function (error, data) {
+	if (error) { console.log(error); }
+	
+	drugs = data;
+	createTool();
+
+});
+
+
+
+
+  //slider stuff
+function showValue(newValue)
+{
+	year = []
+	document.getElementById("range").innerHTML=newValue;
+
+	drugs.forEach(function(d) {
+		if(d.Year == newValue){
+			year.push(d);
+		}
+  	
+	});
+
+
+}
+
+function createTool(){
+	height2 = 75;
+	width2 = 700;
+
+	var svg2 = d3.select("#tooltip").append("svg")
+	.attr("height", height2)
+	.attr("width", width2);
+
+
+	   svg2.append("rect")
+    .attr("x", 0)
+    .attr("y", 0)
+    .attr("height", height2/2)
+    .attr("width", width2)
+    .style("fill", "black")
+    .style("fill-opacity", ".3");
+
+
+    svg2.append("text")
+   	.attr("x", width2 / 8)
+    .attr("y", height2/3)
+    .attr("text-anchor", "middle")
+    .attr("font-weight", "bold")
+    .attr("font-size", 20)
+    .text("State Name");
+
+      svg2.append("text")
+   	.attr("x", width2 / 8)
+    .attr("y", 5 * height2/ 6)
+    .attr("text-anchor", "middle")
+    .attr("font-weight", "normal")
+    .attr("font-size", 20)
+    .text("Georgia");
+
+    svg2.append("text")
+   	.attr("x", ((0 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
+    .attr("y", height2 /3)
+    .attr("text-anchor", "middle")
+    .attr("font-weight", "bold")
+    .attr("font-size", 20)
+    .text("Year");
+
+     svg2.append("text")
+   	.attr("x", ((0 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
+    .attr("y", 5 * height2 /6)
+    .attr("text-anchor", "middle")
+    .attr("font-weight", "normal")
+    .attr("font-size", 20)
+    .text("2001");
+
+     svg2.append("text")
+   	.attr("x", ((1 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
+    .attr("y", height2 /3)
+    .attr("text-anchor", "middle")
+    .attr("font-weight", "bold")
+    .attr("font-size", 20)
+    .text("Rank");
+
+    svg2.append("text")
+   	.attr("x", ((1 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
+    .attr("y",5*  height2 /6)
+    .attr("text-anchor", "middle")
+    .attr("font-weight", "normal")
+    .attr("font-size", 20)
+    .text("3");
+
+
+    svg2.append("text")
+   	.attr("x", ((2 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
+    .attr("y", height2 /3)
+    .attr("text-anchor", "middle")
+    .attr("font-weight", "bold")
+    .attr("font-size", 20)
+    .text("Rank");
+
+     svg2.append("text")
+   	.attr("x", ((2 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
+    .attr("y", 5* height2 /6)
+    .attr("text-anchor", "middle")
+    .attr("font-weight", "normal")
+    .attr("font-size", 20)
+    .text("2");
+
+
+     svg2.append("text")
+   	.attr("x", ((3 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
+    .attr("y", height2 /3)
+    .attr("text-anchor", "middle")
+    .attr("font-weight", "bold")
+    .attr("font-size", 20)
+    .text("Rate");
+
+     svg2.append("text")
+   	.attr("x", ((3 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
+    .attr("y", 5* height2 /6)
+    .attr("text-anchor", "middle")
+    .attr("font-weight", "normal")
+    .attr("font-size", 20)
+    .attr("fill", "red")
+    .text("20" + "%");
+
+     svg2.append("text")
+   	.attr("x", ((4 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
+    .attr("y", height2 /3)
+    .attr("text-anchor", "middle")
+    .attr("font-weight", "bold")
+    .attr("font-size", 20)
+    .text("Rate");
+
+     svg2.append("text")
+   	.attr("x", ((4 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
+    .attr("y", 5* height2 /6)
+    .attr("text-anchor", "middle")
+    .attr("font-weight", "normal")
+    .attr("fill", "orange")
+    .attr("font-size", 20)
+    .text("20" + "%");
+
+
+    svg2.append("line")
+    .attr("x1", width2/ 4)
+    .attr("x2", width2/4)
+    .attr("y1", 0)
+    .attr("y2", height2)
+    .style("stroke", "gray")
+    .style("stroke-width", "1");
+
+     svg2.append("line")
+    .attr("x1", (1 *width2/ 5)*(3/4) +(1/4 * width2) )
+    .attr("x2", (1 *width2/ 5)*(3/4) +(1/4 * width2) )
+    .attr("y1", 0)
+    .attr("y2", height2)
+    .style("stroke", "gray")
+    .style("stroke-width", "1");
+
+    svg2.append("line")
+    .attr("x1", (2 *width2/ 5)*(3/4) +(1/4 * width2) )
+    .attr("x2", (2 *width2/ 5)*(3/4) +(1/4 * width2) )
+    .attr("y1", 0)
+    .attr("y2", height2)
+    .style("stroke", "gray")
+    .style("stroke-width", "1");
+
+    svg2.append("line")
+    .attr("x1", (3 *width2/ 5)*(3/4) +(1/4 * width2) )
+    .attr("x2", (3 *width2/ 5)*(3/4) +(1/4 * width2) )
+    .attr("y1", 0)
+    .attr("y2", height2)
+    .style("stroke", "gray")
+    .style("stroke-width", "1");
+
+     svg2.append("line")
+    .attr("x1", (4 *width2/ 5)*(3/4) +(1/4 * width2) )
+    .attr("x2", (4 *width2/ 5)*(3/4) +(1/4 * width2) )
+    .attr("y1", 0)
+    .attr("y2", height2)
+    .style("stroke", "gray")
+    .style("stroke-width", "1");
+
+ 
+
+
+
+
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
