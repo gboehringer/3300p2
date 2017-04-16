@@ -5,11 +5,10 @@
 <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="http://d3js.org/topojson.v2.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-<script src="https://unpkg.com/simple-statistics@2.5.0/dist/simple-statistics.min.js"></script>
-
 </head>
 <style>
 svg { border: solid #ccc 1px; }
@@ -24,6 +23,7 @@ svg { border: solid #ccc 1px; }
 	width: 40%;
 	float: right;
 }
+
 </style>
 <body>
 <div class = "main">
@@ -32,8 +32,14 @@ svg { border: solid #ccc 1px; }
 	</div>
 	<div class = "right">
 	<p id = "educ"></p>
+	<button type="button" onclick="plotEduc();">Show All</button>
 	</div>
 </div>
+
+<input type="range" min="2000" max="2014" value="2000" step="1" oninput="showValue(this.value)" />
+<span id="range">2000</span>
+
+<p id = "tooltip"></p>
 
 
 
@@ -42,11 +48,18 @@ var height = 400;
 var width = 450;
 var padding = 10;
 
+//dictionary relating to slider
+var yearedu = {};
+//data for drugs in a specific year
+var drugs;
+
 var svg = d3.select("#educ").append("svg")
 .attr("height", height + 2 * padding)
-.attr("width", width + 2 * padding);
+.attr("width", width + 2 * padding)
+.attr("id", "linegraph");
 
-var educ_attain, states;
+var educ_attain = {};
+var edu_array, states, xScale, yScale, paths;
 var projection = d3.geoAlbersUsa().scale(75);
 var pathGenerator = d3.geoPath().projection(projection);
 var max_attain = 54.8;
@@ -59,21 +72,95 @@ var buildPath = function(d, xScale, yScale){
 	return res;	
 }
 
+//Show all lines
 var plotEduc = function(){
-	var xScale = d3.scaleLinear().domain([2000, 2014]).range([padding*2+5, width-padding]);
-	var yScale = d3.scaleLinear().domain([max_attain, 0]).range([padding, height-padding]);
-
-	var paths = svg.selectAll("path").data(educ_attain);
-
+	paths = svg.selectAll("path").data(edu_array);
 	//console.log(buildPath(educ_attain[0], xScale, yScale));
 	paths = paths.enter().append("path")
 	.attr("d", function (d) {return buildPath(d, xScale, yScale);})
 	.attr("fill", "none")
-	.attr("stroke", function(d) {if (d.state == "United States") return "red"; else return "black";})
-	.attr("stroke-width", 1.5)
-	.attr("opacity", 0.5)
+	.attr("stroke", "#D3D3D3")
+	.attr("stroke-width", 1)
+	.attr("opacity", 1)
 	.attr("id", function(d){return d.state})
 	.merge(paths);
+};
+
+//Show 1 line
+var showState = function(st){
+	var svg = d3.select("#linegraph");
+	svg.append("path")
+	.attr("d", buildPath(educ_attain[st], xScale, yScale))
+	.attr("fill", "none")
+	.attr("stroke", "#D3D3D3")
+	.attr("stroke-width", 1)
+	.attr("opacity", 1)
+	.attr("id", educ_attain[st].state);
+
+	var line1 = 
+    svg.append("line")
+    .attr("x1", xScale(2000))
+    .attr("y1", padding)
+    .attr("x2", xScale(2000))
+    .attr("y2", height)
+    .attr("stroke-width", 1)
+    .attr("stroke", "blue")
+    .attr("opacity", "0.2")
+    .attr("class", "line2");
+	
+}
+var updateeduc = function(year){
+
+    var xScale = d3.scaleLinear().domain([2000, 2014]).range([padding*2+5, width-padding]);
+
+    d3.selectAll(".line2")
+    .attr("x1", xScale(year))
+    .attr("x2", xScale(year))
+
+};
+
+var updatetool = function(state){
+
+    d3.selectAll(".")
+
+    d3.selectAll(".")
+
+    d3.selectAll(".")
+
+    d3.selectAll(".")
+
+    d3.selectAll(".")
+
+    d3.selectAll(".")
+}
+
+d3.csv("educattain.csv", function (error, data) {
+	if (error) { console.log(error); }
+	for (i in data){
+		if (data[i].FIPS != "" && data[i].FIPS){
+			educ_attain[data[i].FIPS] = {
+			"state": data[i].state,
+			"2000": data[i]["2000"],
+			"2001": data[i]["2001"],
+			"2002": data[i]["2002"],
+			"2003": data[i]["2003"],
+			"2004": data[i]["2004"],
+			"2005": data[i]["2005"],
+			"2006": data[i]["2006"],
+			"2007": data[i]["2007"],
+			"2008": data[i]["2008"],
+			"2009": data[i]["2009"],
+			"2010": data[i]["2010"],
+			"2011": data[i]["2011"],
+			"2012": data[i]["2012"],
+			"2013": data[i]["2013"],
+			"2014": data[i]["2014"]
+			}; 
+		}
+	}
+	edu_array = data;
+	xScale = d3.scaleLinear().domain([2000, 2014]).range([padding*2+5, width-padding]);
+	yScale = d3.scaleLinear().domain([max_attain, 0]).range([padding, height-padding]);
 
 	var xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
 	var yAxis = d3.axisLeft(yScale);
@@ -94,31 +181,17 @@ var plotEduc = function(){
 		.attr("opacity", "0.2");
 		y += 5;
 	}
-};
-
-d3.csv("educattain.csv", function (error, data) {
-	if (error) { console.log(error); }
-	
-	educ_attain = data;
-	plotEduc();
+	//plotEduc();
 });
 
 //MAP STUFF
-//var svg2 = d3.select("#map").append("svg")
-
-var project = d3.geoAlbersUsa();
-var path = d3.geoPath().projection(project);
-
-var stateAt, rateScale;
-var temp;
-
 d3.queue()
 .defer(d3.json, "us.json")
 .defer(d3.csv, "drugs.csv")
 .await(function (error, rawMap, rate) {
 	if (error) {console.log(error);}
+	drugs = rate;
 	states = topojson.feature(rawMap, rawMap.objects.states);
-	temp = 0;
 	stateAt = d3.map(rate, function(d){
 		return d.FIPS;
 	});
@@ -128,12 +201,14 @@ d3.queue()
 		rate_Arr.push(Number(d.CrudeRate));
 		return rate_Arr;
 	});
+	
 	console.log(rate_Arr);
 	var color = ['#e6f2ff','#cce6ff','#99ccff','#66b3ff', '#3399ff', '#0080ff', '#0066cc', '#004080','#00264d', '##000d1a'];
 	var rateScale = d3.scaleQuantize().domain([0,d3.max(rate_Arr)])
 		.range(color);
 	console.log(Math.log(d3.max(rate_Arr)));
 	showMap(rateScale, "#map");
+	createTool();
 });
 
 function showMap(scale, placement) {
@@ -143,73 +218,67 @@ function showMap(scale, placement) {
 	
 	var paths = svg.selectAll("path.state").data(states.features);
 	paths.enter().append("path").attr("class", "state")
+	.attr("id", function(state){
+		return state.id;
+	})
 	.merge(paths)
 	.transition().duration(1000)
-	.style("stroke", "grey")
-	.attr("d", path)
+	.style("stroke", "white")
 	.style("fill", function (s) {
+		console.log(s.id);
 		var statesDat = stateAt.get(s.id);
+		console.log(statesDat);
 		if(statesDat){
 			return(scale(statesDat.CrudeRate));
 		}
+	})
+	.attr("d", function (state) {
+		return pathGenerator(state);
+	})
+	.attr("onclick", function(state){
+		return "showState("+state.id+");";
 	});
 }
-
-//}
-/*svg2.append("g")
-	.attr("class","states")
-	.selectAll("path")
-	.data(topojson.feature(rawMap, rawMap.objects.states).features)
-	.enter().append("path")
-	.attr("d",path)
-	.style("stroke","white")
-	.style("fill", function (states) {
-		var statesDat = stateAt.get(states.id);
-		console.log(statesDat);
-		if(statesDat){
-			return(rateScale(statesDat.CrudeRate));
-		}
-	})
-
-svg2.append("path")
-	.attr("class","state-borders")
-	.attr("d",path(topojson.mesh(rawMap,rawMap.objects.states, function(c,d){ return c !== d; })));*/
-
-
-
-
-//other stuff
-
-var drugs;
-var year = [];
-d3.csv("drugs.csv", function (error, data) {
-	if (error) { console.log(error); }
-	
-	drugs = data;
-	createTool();
-});
-
-
 
   //slider stuff
 function showValue(newValue)
 {
 	year = []
 	document.getElementById("range").innerHTML=newValue;
+
 	drugs.forEach(function(d) {
 		if(d.Year == newValue){
 			year.push(d);
 		}
   	
 	});
+
+
+    yearedu = {};
+
+    edu_array.forEach(function(d){
+        if(d.state == "United States"){
+            ;
+        }
+        else{
+
+            yearedu[d.state] = d[newValue]; 
+        }
+    });
+
+    updateeduc(newValue);
+
 }
 
 function createTool(){
 	height2 = 75;
 	width2 = 700;
+
 	var svg2 = d3.select("#tooltip").append("svg")
 	.attr("height", height2)
 	.attr("width", width2);
+
+
 	   svg2.append("rect")
     .attr("x", 0)
     .attr("y", 0)
@@ -217,6 +286,8 @@ function createTool(){
     .attr("width", width2)
     .style("fill", "black")
     .style("fill-opacity", ".3");
+
+
     svg2.append("text")
    	.attr("x", width2 / 8)
     .attr("y", height2/3)
@@ -224,13 +295,16 @@ function createTool(){
     .attr("font-weight", "bold")
     .attr("font-size", 20)
     .text("State Name");
+
       svg2.append("text")
    	.attr("x", width2 / 8)
     .attr("y", 5 * height2/ 6)
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("Georgia");
+    .text("Georgia")
+    .attr("class", "toolstate");
+
     svg2.append("text")
    	.attr("x", ((0 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", height2 /3)
@@ -238,13 +312,16 @@ function createTool(){
     .attr("font-weight", "bold")
     .attr("font-size", 20)
     .text("Year");
+
      svg2.append("text")
    	.attr("x", ((0 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", 5 * height2 /6)
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("2001");
+    .text("2001")
+    .attr("class", "toolyear");
+
      svg2.append("text")
    	.attr("x", ((1 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", height2 /3)
@@ -252,13 +329,17 @@ function createTool(){
     .attr("font-weight", "bold")
     .attr("font-size", 20)
     .text("Rank");
+
     svg2.append("text")
    	.attr("x", ((1 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y",5*  height2 /6)
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("3");
+    .text("3")
+    .attr("class", "tooledurank");
+
+
     svg2.append("text")
    	.attr("x", ((2 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", height2 /3)
@@ -266,13 +347,17 @@ function createTool(){
     .attr("font-weight", "bold")
     .attr("font-size", 20)
     .text("Rank");
+
      svg2.append("text")
    	.attr("x", ((2 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", 5* height2 /6)
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("2");
+    .text("2")
+    .attr("class", "tooldrugrank");
+
+
      svg2.append("text")
    	.attr("x", ((3 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", height2 /3)
@@ -280,6 +365,7 @@ function createTool(){
     .attr("font-weight", "bold")
     .attr("font-size", 20)
     .text("Rate");
+
      svg2.append("text")
    	.attr("x", ((3 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", 5* height2 /6)
@@ -287,7 +373,9 @@ function createTool(){
     .attr("font-weight", "normal")
     .attr("font-size", 20)
     .attr("fill", "red")
-    .text("20" + "%");
+    .text("20" + "%")
+    .attr("class", "tooleduperc");
+
      svg2.append("text")
    	.attr("x", ((4 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", height2 /3)
@@ -295,6 +383,7 @@ function createTool(){
     .attr("font-weight", "bold")
     .attr("font-size", 20)
     .text("Rate");
+
      svg2.append("text")
    	.attr("x", ((4 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", 5* height2 /6)
@@ -302,7 +391,10 @@ function createTool(){
     .attr("font-weight", "normal")
     .attr("fill", "orange")
     .attr("font-size", 20)
-    .text("20" + "%");
+    .text("20" + "%")
+    .attr("class", "tooldrugperc");
+
+
     svg2.append("line")
     .attr("x1", width2/ 4)
     .attr("x2", width2/4)
@@ -310,6 +402,7 @@ function createTool(){
     .attr("y2", height2)
     .style("stroke", "gray")
     .style("stroke-width", "1");
+
      svg2.append("line")
     .attr("x1", (1 *width2/ 5)*(3/4) +(1/4 * width2) )
     .attr("x2", (1 *width2/ 5)*(3/4) +(1/4 * width2) )
@@ -317,6 +410,7 @@ function createTool(){
     .attr("y2", height2)
     .style("stroke", "gray")
     .style("stroke-width", "1");
+
     svg2.append("line")
     .attr("x1", (2 *width2/ 5)*(3/4) +(1/4 * width2) )
     .attr("x2", (2 *width2/ 5)*(3/4) +(1/4 * width2) )
@@ -324,6 +418,7 @@ function createTool(){
     .attr("y2", height2)
     .style("stroke", "gray")
     .style("stroke-width", "1");
+
     svg2.append("line")
     .attr("x1", (3 *width2/ 5)*(3/4) +(1/4 * width2) )
     .attr("x2", (3 *width2/ 5)*(3/4) +(1/4 * width2) )
@@ -331,6 +426,7 @@ function createTool(){
     .attr("y2", height2)
     .style("stroke", "gray")
     .style("stroke-width", "1");
+
      svg2.append("line")
     .attr("x1", (4 *width2/ 5)*(3/4) +(1/4 * width2) )
     .attr("x2", (4 *width2/ 5)*(3/4) +(1/4 * width2) )
@@ -338,10 +434,13 @@ function createTool(){
     .attr("y2", height2)
     .style("stroke", "gray")
     .style("stroke-width", "1");
+
  
+
+
+
+
 }
-
-
 </script>
 
 
