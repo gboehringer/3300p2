@@ -1,730 +1,1 @@
-"Sex","Race","State","Ethnicity","Age Group","First Year","Last Year","Cause of Death","Year","Deaths","Population","Crude Rate","Age-Adjusted Rate"
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2001","216","4467634","4.83","4.87549624374428"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2001","62","633714","9.78","9.40874399688359"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2001","552","5273477","10.47","10.9321917273363"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2001","126","2691571","4.68","4.86101059889512"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2001","1226","34479458","3.56","3.61254663536742"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2001","411","4425687","9.29","8.97279313999671"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2001","307","3432835","8.94","8.80243682214266"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2001","64","795699","8.04","8.06895495380435"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2001","93","574504","16.19","16.3021565209541"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2001","1746","16356966","10.67","10.9547385341663"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2001","511","8377038","6.1","6.01113880836302"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2001","77","1225948","6.28","6.16208864677746"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2001","98","1319962","7.42","7.83168072575399"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2001","892","12488445","7.14","7.14759492698833"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2001","283","6127760","4.62","4.66818561292237"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2001","87","2931997","2.97","2.99428155837661"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2001","138","2702162","5.11","5.26629122136163"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2001","345","4068132","8.48","8.41702751573349"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2001","265","4477875","5.92","5.98901820219341"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2001","85","1285692","6.61","6.53384756760176"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2001","639","5374691","11.89","11.4971341744257"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2001","689","6397634","10.77","10.464457116186"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2001","621","9991120","6.22","6.18061437561556"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2001","185","4982796","3.71","3.65582449131039"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2001","169","2852994","5.92","6.17730394339148"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2001","351","5641142","6.22","6.28190207935934"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2001","56","906961","6.17","6.25212780672035"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2001","66","1719836","3.84","3.96171001548711"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2001","261","2098399","12.44","12.2609321894102"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2001","79","1255517","6.29","6.0628911016595"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2001","705","8492671","8.3","8.14391817332478"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2001","258","1831690","14.09","14.3983356108147"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2001","1079","19082838","5.65","5.56505290532919"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2001","551","8210122","6.71","6.6499436124355"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2001","14","639062","2.19","2.38584214450099"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2001","737","11387404","6.47","6.47364514256323"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2001","269","3467100","7.76","7.98916490733071"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2001","241","3467937","6.95","6.87636771131925"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2001","958","12298970","7.79","7.91003435125264"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2001","110","1057142","10.41","10.1664556837386"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2001","242","4064995","5.95","5.93610594350924"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2001","24","757972","3.17","3.23239136446844"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2001","424","5750789","7.37","7.34580726838334"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2001","1374","21319622","6.44","6.55295615828205"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2001","209","2283715","9.15","10.4527965207632"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2001","44","612223","7.19","7.09596867941675"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2001","459","7198362","6.38","6.16667861850709"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2001","499","5985722","8.34","8.12244725974192"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2001","206","1801481","11.44","11.5150746236015"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2001","269","5406835","4.98","4.94339994720022"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2001","22","494657","4.45","4.59543203478157"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2001","19394","284968955","6.81","."
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2002","211","4480089","4.71","4.73957849368738"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2002","84","642337","13.08","12.13383081934"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2002","624","5396255","11.56","11.9905218823616"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2002","176","2705927","6.5","6.7948171489361"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2002","2975","34871843","8.53","8.642806704058"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2002","448","4490406","9.98","9.69612253940737"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2002","354","3458749","10.23","10.2621311795816"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2002","84","806169","10.42","10.4558376908183"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2002","61","573158","10.64","10.984691799353"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2002","1927","16689370","11.55","11.8095946293739"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2002","563","8508256","6.62","6.5042018081102"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2002","77","1239613","6.21","6.12162693596948"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2002","117","1340372","8.73","9.10630972478953"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2002","986","12525556","7.87","7.87521968404511"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2002","293","6155967","4.76","4.80222097028095"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2002","91","2934234","3.1","3.13499270401095"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2002","170","2713535","6.26","6.42262713550938"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2002","426","4089875","10.42","10.4045051572838"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2002","365","4497267","8.12","8.24606034570944"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2002","139","1295960","10.73","11.0534587621147"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2002","723","5440389","13.29","12.8671411965593"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2002","705","6417206","10.99","10.7124130870602"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2002","751","10015710","7.5","7.48529296037371"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2002","201","5018935","4","3.95045807677942"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2002","183","2858681","6.4","6.61721148052363"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2002","416","5674825","7.33","7.44327802141725"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2002","78","911667","8.56","8.66333471253824"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2002","66","1728292","3.82","3.93941693396686"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2002","323","2173791","14.86","14.7301234905909"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2002","111","1269089","8.75","8.75314621158392"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2002","813","8552643","9.51","9.32760502384866"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2002","287","1855309","15.47","16.0985464800046"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2002","923","19137800","4.82","4.76521252693178"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2002","647","8326201","7.77","7.72240168146501"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2002","17","638168","2.66","2.61521507227638"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2002","931","11407889","8.16","8.18543029859483"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2002","240","3489080","6.88","7.064047646223"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2002","318","3513424","9.05","8.91974457333046"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2002","1097","12331031","8.9","9.06990103998532"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2002","99","1065995","9.29","9.32148842114563"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2002","217","4107795","5.28","5.34003763361214"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2002","22","760020","2.89","3.04250914017465"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2002","491","5795918","8.47","8.43443616554688"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2002","1598","21690325","7.37","7.48177980966966"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2002","288","2324815","12.39","13.9993656475874"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2002","47","615442","7.64","7.50830842745825"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2002","509","7286873","6.99","6.78164583586966"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2002","643","6052349","10.62","10.3743022928674"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2002","229","1805414","12.68","12.8967847697411"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2002","340","5445162","6.24","6.18152767503288"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2002","34","500017","6.8","6.7980257360026"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2002","23518","287625193","8.18","."
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2003","197","4503491","4.37","4.4372576829609"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2003","83","648414","12.8","12.751310124509"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2003","674","5510364","12.23","12.753888864748"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2003","184","2724816","6.75","7.05974693751513"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2003","3108","35253159","8.82","8.90785192150369"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2003","502","4528732","11.08","10.6957555219445"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2003","307","3484336","8.81","8.74808970378233"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2003","77","818003","9.41","9.46079233980031"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2003","103","568502","18.12","17.9290891740521"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2003","2054","17004085","12.08","12.3348985341865"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2003","607","8622793","7.04","6.91507353882655"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2003","92","1251154","7.35","7.09011511507811"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2003","102","1363380","7.48","7.90066318550003"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2003","847","12556006","6.75","6.73182826119191"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2003","434","6196638","7","7.07356639239251"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2003","96","2941999","3.26","3.37322834486498"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2003","188","2723004","6.9","7.01160590336266"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2003","560","4117170","13.6","13.5338476112297"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2003","536","4521042","11.86","12.0649055882098"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2003","133","1306513","10.18","10.3276250017134"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2003","779","5496269","14.17","13.754086893576"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2003","823","6422565","12.81","12.5911054360164"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2003","761","10041152","7.58","7.57376972651516"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2003","246","5053572","4.87","4.7818627995928"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2003","207","2868312","7.22","7.47441620749864"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2003","522","5709403","9.14","9.25458170392519"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2003","93","919630","10.11","10.5675207484625"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2003","55","1738643","3.16","3.20274147407735"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2003","342","2248850","15.21","15.1841043649356"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2003","127","1279840","9.92","9.60267816469408"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2003","721","8601402","8.38","8.29040778979202"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2003","358","1877574","19.07","19.7285895055554"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2003","964","19175939","5.03","4.94715710657674"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2003","762","8422501","9.05","8.98689712063275"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2003","22","638817","3.44","3.44352702954391"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2003","775","11434788","6.78","6.79097806444621"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2003","400","3504892","11.41","11.7362152274056"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2003","355","3547376","10.01","9.75250245085271"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2003","1381","12374658","11.16","11.3730281711435"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2003","146","1071342","13.63","13.6874016211722"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2003","287","4150297","6.92","6.96684951434647"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2003","24","763729","3.14","3.35983896363402"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2003","662","5847812","11.32","11.3244790950547"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2003","1753","22030931","7.96","8.05433762776602"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2003","353","2360137","14.96","16.0569332135468"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2003","65","617858","10.52","10.1870641501433"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2003","547","7366977","7.43","7.21757022667107"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2003","696","6104115","11.4","11.020676998129"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2003","262","1812295","14.46","15.0396691755293"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2003","383","5479203","6.99","6.97023758272899"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2003","30","503453","5.96","5.79992733528408"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2003","25785","290107933","8.89","."
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2004","283","4530729","6.25","6.31115549951716"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2004","86","659286","13.04","12.8151845453923"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2004","744","5652404","13.16","13.6942565536052"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2004","230","2749686","8.36","8.59996639647327"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2004","3125","35574576","8.78","8.79747925056224"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2004","518","4575013","11.32","10.8942227839521"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2004","333","3496094","9.52","9.6392750901012"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2004","63","830803","7.58","7.61854323270195"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2004","87","567754","15.32","15.6258318553814"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2004","2264","17415318","13","13.2064980943851"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2004","666","8769252","7.59","7.46453518656108"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2004","103","1273569","8.09","7.87095119252352"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2004","98","1391802","7.04","7.43467517760719"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2004","1035","12589773","8.22","8.25229912516577"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2004","542","6233007","8.7","8.74579386815813"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2004","122","2953635","4.13","4.24401404328555"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2004","224","2734373","8.19","8.44807145674354"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2004","526","4146101","12.69","12.717821929066"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2004","539","4552238","11.84","12.0130865361084"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2004","140","1313688","10.66","11.0227526042349"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2004","676","5546935","12.19","11.8478966742844"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2004","669","6412281","10.43","10.2315792861142"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2004","867","10055315","8.62","8.63428994934415"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2004","250","5087713","4.91","4.83462101352219"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2004","224","2889010","7.75","8.13439619144458"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2004","548","5747741","9.53","9.73820320840755"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2004","98","930009","10.54","10.7371418093442"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2004","59","1749370","3.37","3.58999456114644"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2004","380","2346222","16.2","16.0121312285319"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2004","124","1290121","9.61","9.51161795740542"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2004","590","8634561","6.83","6.76059393516228"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2004","314","1903808","16.49","16.929974253999"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2004","831","19171567","4.33","4.24854308798372"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2004","854","8553152","9.98","9.90654126098992"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2004","17","644705","2.64","2.48342844458339"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2004","1136","11452251","9.92","9.89595489201298"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2004","476","3525233","13.5","13.8677956980395"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2004","365","3569463","10.23","9.98801967795228"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2004","1544","12410722","12.44","12.6993290651935"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2004","106","1074579","9.86","9.71359796231946"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2004","356","4210921","8.45","8.42528449763439"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2004","43","770396","5.58","5.79676279071361"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2004","763","5910809","12.91","12.8093466033061"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2004","1813","22394023","8.1","8.16560040919615"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2004","358","2401580","14.91","16.3179672616278"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2004","50","619920","8.07","8.17060854849569"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2004","558","7475575","7.46","7.28641068349991"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2004","811","6178645","13.13","12.7025323383544"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2004","333","1816438","18.33","18.6855829666466"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2004","437","5514026","7.93","7.80870217766722"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2004","46","509106","9.04","8.99123262066607"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2004","27424","292805298","9.37","."
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2005","283","4569805","6.19","6.32205612583619"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2005","79","666946","11.85","11.4158152944459"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2005","794","5839077","13.6","14.1170325744927"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2005","269","2781097","9.67","10.0724949916686"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2005","3214","35827943","8.97","8.95993481814494"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2005","608","4631888","13.13","12.5902643449579"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2005","295","3506956","8.41","8.49976477178259"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2005","62","845150","7.34","7.42504111273654"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2005","77","567136","13.58","13.6118618600474"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2005","2371","17842038","13.29","13.5225949226542"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2005","738","8925922","8.27","8.15267879338564"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2005","126","1292729","9.75","9.37024405748363"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2005","109","1428241","7.63","8.07947449994516"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2005","1067","12609903","8.46","8.39531212073841"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2005","610","6278616","9.72","9.81962993254733"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2005","141","2964454","4.76","4.82367504731878"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2005","241","2745299","8.78","9.0197818484016"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2005","638","4182742","15.25","15.321444216534"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2005","661","4576628","14.44","14.6409472417796"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2005","163","1318787","12.36","12.4095029457502"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2005","656","5592379","11.73","11.3867576619128"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2005","780","6403290","12.18","11.9584688076547"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2005","985","10051137","9.8","9.759550493588"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2005","282","5119598","5.51","5.42627552599523"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2005","248","2905943","8.53","8.82139784769067"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2005","608","5790300","10.5","10.6542575958871"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2005","96","940102","10.21","10.1430606569634"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2005","86","1761497","4.88","5.00203440326605"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2005","457","2432143","18.79","18.6235578836418"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2005","142","1298492","10.94","10.7005023703648"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2005","823","8651974","9.51","9.4066707327597"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2005","373","1932274","19.3","20.025667458234"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2005","944","19132610","4.93","4.79778930061885"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2005","1000","8705407","11.49","11.3878057472674"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2005","12","646089","1.86","1.81357569288082"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2005","1243","11463320","10.84","10.8931198813871"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2005","478","3548597","13.47","13.8187781780267"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2005","386","3613202","10.68","10.4116289124675"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2005","1613","12449990","12.96","13.1722281209973"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2005","156","1067916","14.61","14.2780115033407"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2005","427","4270150","10","9.90245211703032"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2005","40","775493","5.16","5.58397291893117"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2005","872","5991057","14.56","14.5025934977289"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2005","1910","22778123","8.39","8.50022885066707"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2005","438","2457719","17.82","19.3064815184882"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2005","53","621215","8.53","8.35784281773242"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2005","581","7577105","7.67","7.47797951694584"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2005","850","6257305","13.58","12.9610240171735"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2005","184","1820492","10.11","10.4461663169244"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2005","518","5546166","9.34","9.31292095044405"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2005","26","514157","5.06","4.89818016997101"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2005","29813","295516599","10.09","."
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2006","398","4628981","8.6","8.73765109274872"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2006","76","675302","11.25","11.0821020416994"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2006","876","6029141","14.53","14.964485006964"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2006","285","2821761","10.1","10.4651646753768"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2006","3494","36021202","9.7","9.59390388324928"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2006","627","4720423","13.28","12.7574203124149"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2006","407","3517460","11.57","11.4743291466168"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2006","78","859268","9.08","9.27367012030557"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2006","101","570681","17.7","17.8333162228414"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2006","2591","18166990","14.26","14.376118625443"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2006","830","9155813","9.07","8.91983011941467"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2006","86","1309731","6.57","6.41890154652558"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2006","130","1468669","8.85","9.33891587892888"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2006","1369","12643955","10.83","10.8244116547109"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2006","736","6332669","11.62","11.695553065778"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2006","187","2982644","6.27","6.52780359571702"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2006","257","2762931","9.3","9.53445225681311"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2006","728","4219239","17.25","17.3071443049578"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2006","705","4302665","16.39","16.4547455009603"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2006","159","1323619","12.01","12.0492128437471"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2006","762","5627367","13.54","13.1223994597108"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2006","970","6410084","15.13","14.649044444642"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2006","1176","10036081","11.72","11.6986920661976"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2006","311","5163555","6.02","5.94551468320381"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2006","339","2904978","11.67","12.0225374255808"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2006","743","5842704","12.72","12.9495373697149"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2006","97","952692","10.18","10.1299019941741"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2006","91","1772693","5.13","5.30777557061544"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2006","461","2522658","18.27","17.9216735869887"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2006","149","1308389","11.39","11.1933179726095"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2006","847","8661679","9.78","9.66822131362153"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2006","418","1962137","21.3","21.7316916340886"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2006","1680","19104631","8.79","8.58314695755734"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2006","1059","8917270","11.88","11.8183114053172"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2006","14","649422","2.16","2.10274902446057"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2006","1515","11481213","13.2","13.2305682746976"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2006","563","3594090","15.66","16.1603515259404"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2006","485","3670883","13.21","12.8632770178577"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2006","1638","12510809","13.09","13.4755947351927"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2006","175","1063096","16.46","16.3761261217858"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2006","554","4357847","12.71","12.6436304234222"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2006","37","783033","4.73","5.20536547803322"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2006","975","6088766","16.01","15.9236023325856"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2006","2191","23359580","9.38","9.45070327963607"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2006","444","2525507","17.58","19.0491845719822"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2006","75","622892","12.04","12.1524096275418"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2006","629","7673725","8.2","7.99127094760377"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2006","897","6370753","14.08","13.5406862889996"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2006","362","1827912","19.8","20.3839846403691"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2006","593","5577655","10.63","10.5956645104871"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2006","55","522667","10.52","10.3640203299516"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2006","34425","298379912","11.54","."
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2007","511","4672840","10.94","11.103065404594"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2007","72","680300","10.58","10.1568215262071"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2007","943","6167681","15.29","15.7804022308156"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2007","301","2848650","10.57","10.8590937218482"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2007","3854","36250311","10.63","10.4669161738727"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2007","734","4803868","15.28","14.6736328794431"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2007","433","3527270","12.28","12.2131427335147"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2007","97","871749","11.13","11.4154283846298"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2007","61","574404","10.62","10.7230247474844"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2007","2794","18367842","15.21","15.3967439829326"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2007","923","9349988","9.87","9.69078446899977"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2007","136","1315675","10.34","10.0117441840702"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2007","126","1505105","8.37","8.6624037823662"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2007","1192","12695866","9.39","9.37267417484574"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2007","781","6379599","12.24","12.3814415700466"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2007","203","2999212","6.77","6.87258396176465"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2007","270","2783785","9.7","10.0078508571832"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2007","708","4256672","16.63","16.6225961512662"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2007","808","4375581","18.47","18.680656127115"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2007","159","1327040","11.98","12.4707604135559"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2007","769","5653408","13.6","13.1940544607022"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2007","922","6431559","14.34","13.9733687416445"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2007","1236","10001284","12.36","12.1982320489645"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2007","341","5207203","6.55","6.43268167543485"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2007","314","2928350","10.72","10.9400277349581"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2007","714","5887612","12.13","12.252623943887"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2007","125","964706","12.96","12.7977764171352"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2007","80","1783440","4.49","4.77008044370995"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2007","499","2601072","19.18","18.8089682162787"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2007","186","1312540","14.17","13.8494451310841"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2007","727","8677885","8.38","8.37649664684241"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2007","462","1990070","23.22","23.3904934970969"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2007","1708","19132335","8.93","8.65286687016057"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2007","1084","9118037","11.89","11.8579219551295"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2007","32","652822","4.9","4.74551169770072"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2007","1592","11500468","13.84","13.9089774369134"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2007","666","3634349","18.33","18.9392296705424"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2007","502","3722417","13.49","13.1157187798474"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2007","1733","12563937","13.79","13.8387105601524"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2007","135","1057315","12.77","12.3860494318621"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2007","545","4444110","12.26","12.1889247449728"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2007","32","791623","4.04","4.10255588335613"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2007","985","6175727","15.95","15.8808027084881"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2007","2194","23831983","9.21","9.25907346485108"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2007","511","2597746","19.67","21.3316123713352"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2007","66","623481","10.59","10.7426318402945"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2007","700","7751000","9.03","8.8760496561898"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2007","962","6461587","14.89","14.3513966231889"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2007","397","1834052","21.65","22.6063399321953"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2007","622","5610775","11.09","11.0633349640701"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2007","63","534876","11.78","12.3092072166621"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2007","36010","301231207","11.95","."
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2008","607","4718206","12.87","12.985727413552"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2008","127","687455","18.47","17.8692192898204"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2008","828","6280362","13.18","13.5824848826984"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2008","360","2874554","12.52","13.0828169717128"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2008","3863","36604337","10.55","10.3596357864103"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2008","749","4889730","15.32","14.7896505178798"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2008","386","3545579","10.89","10.8020032034085"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2008","124","883874","14.03","14.3630532617305"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2008","56","580236","9.65","9.7892934382158"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2008","2963","18527305","15.99","16.1804341651544"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2008","935","9504843","9.84","9.71639688270102"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2008","123","1332213","9.23","9.04261075445468"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2008","146","1534320","9.52","9.84941086322972"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2008","1353","12747038","10.61","10.5959162513669"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2008","830","6424806","12.92","13.2269117287847"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2008","209","3016734","6.93","7.12373533487729"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2008","219","2808076","7.8","7.9880939092105"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2008","764","4289878","17.81","18.0035517129782"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2008","647","4435586","14.59","14.8672124331889"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2008","162","1330509","12.18","12.3655437038494"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2008","693","5684965","12.19","11.7311229568659"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2008","786","6468967","12.15","11.9072323342061"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2008","1239","9946889","12.46","12.3837489009675"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2008","384","5247018","7.32","7.2025318454901"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2008","303","2947806","10.28","10.56442520032"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2008","765","5923916","12.91","13.1229658307275"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2008","134","976415","13.72","14.1010693411532"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2008","94","1796378","5.23","5.47897357593223"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2008","519","2653630","19.56","19.2022230848353"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2008","126","1315906","9.58","9.3526409289571"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2008","702","8711090","8.06","7.97818240768163"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2008","518","2010662","25.76","26.7270280370754"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2008","1691","19212436","8.8","8.51733362821024"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2008","1196","9309449","12.85","12.8022648931997"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2008","46","657569","7","7.53460499845078"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2008","1733","11515391","15.05","15.1786387404784"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2008","564","3668976","15.37","15.697498367024"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2008","452","3768748","11.99","11.8436288393012"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2008","1850","12612285","14.67","14.9259736181214"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2008","185","1055003","17.54","17.3189129029686"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2008","565","4528996","12.48","12.4990687546221"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2008","54","799124","6.76","7.31137105383781"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2008","938","6247411","15.01","14.8626924143852"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2008","2053","24309039","8.45","8.52937129410436"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2008","468","2663029","17.57","18.8927724208347"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2008","73","624151","11.7","10.9908510177324"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2008","718","7833496","9.17","8.99296021606938"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2008","1011","6562231","15.41","14.7257330970935"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2008","459","1840310","24.94","25.790382352257"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2008","606","5640996","10.74","10.5986529448507"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2008","74","546043","13.55","14.0977681247358"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2008","36450","304093966","11.99","."
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2009","630","4757938","13.24","13.6395837718064"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2009","131","698895","18.74","17.7409283525355"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2009","1002","6343154","15.8","16.1425124181611"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2009","351","2896843","12.12","12.6641055714437"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2009","4056","36961229","10.97","10.7356093868528"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2009","769","4972195","15.47","14.9439158421683"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2009","393","3561807","11.03","10.9809400255528"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2009","136","891730","15.25","15.4666622559588"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2009","26","592228","4.39","4.11765794275358"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2009","3092","18652644","16.58","16.7076441357945"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2009","1007","9620846","10.47","10.3427194121755"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2009","136","1346717","10.1","9.63588129753964"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2009","171","1554439","11","11.6307418881474"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2009","1381","12796778","10.79","10.7940581796837"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2009","896","6459325","13.87","14.0168604556908"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2009","207","3032870","6.83","7.14661128199602"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2009","304","2832704","10.73","11.0825790848069"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2009","769","4317074","17.81","18.0338380366039"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2009","584","4491648","13","13.1340512418652"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2009","173","1329590","13.01","12.7750588508685"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2009","743","5730388","12.97","12.4032676672112"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2009","816","6517613","12.52","12.2043020253463"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2009","1429","9901591","14.43","14.5082245634377"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2009","419","5281203","7.93","7.87762115395236"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2009","323","2958774","10.92","11.2591860153618"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2009","863","5961088","14.48","14.6678422297931"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2009","142","983982","14.43","14.5888708948312"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2009","106","1812683","5.85","5.91809048681752"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2009","550","2684665","20.49","20.132674954047"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2009","168","1316102","12.76","12.4269662083418"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2009","263","8755602","3","3.0066919978092"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2009","438","2036802","21.5","22.092010011718"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2009","1592","19307066","8.25","7.9696641884538"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2009","1191","9449566","12.6","12.6188440639422"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2009","27","664968","4.06","4.44548305333836"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2009","1236","11528896","10.72","10.9244351710129"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2009","756","3717572","20.34","20.6815221250994"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2009","501","3808600","13.15","12.9301794904005"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2009","1909","12666858","15.07","15.2746073806487"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2009","161","1053646","15.28","14.7109671972045"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2009","615","4589872","13.4","13.2957544773847"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2009","49","807067","6.07","6.69378269460511"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2009","962","6306019","15.26","15.1726937679094"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2009","2409","24801761","9.71","9.81775557078339"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2009","478","2723421","17.55","19.17922668369"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2009","55","624817","8.8","8.3724446293455"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2009","685","7925937","8.64","8.49383840689668"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2009","987","6667426","14.8","14.3462382865301"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2009","226","1847775","12.23","12.4511451553532"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2009","631","5669264","11.13","10.9017241574236"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2009","60","559851","10.72","10.8958393040339"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2009","37004","306771529","12.06","."
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2010","547","4779736","11.44","11.8061471256474"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2010","83","710231","11.69","11.5914932272297"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2010","1098","6392017","17.18","17.5908522818983"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2010","350","2915918","12","12.5441297658613"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2010","4057","37253956","10.89","10.5420050994473"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2010","654","5029196","13","12.6301267964734"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2010","363","3574097","10.16","9.99982298859459"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2010","145","897934","16.15","16.6015339032246"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2010","78","601723","12.96","13.1303688182218"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2010","3061","18801310","16.28","16.3894290246522"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2010","1054","9687653","10.88","10.7176714221885"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2010","151","1360301","11.1","10.8901269868208"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2010","178","1567582","11.36","11.7177602289306"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2010","1288","12830632","10.04","9.98242696919516"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2010","927","6483802","14.3","14.3876537977433"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2010","253","3046355","8.31","8.6140122483333"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2010","269","2853118","9.43","9.56876833682364"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2010","1007","4339367","23.21","23.6900006843547"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2010","591","4533372","13.04","13.1319096005305"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2010","135","1328361","10.16","10.4847031344638"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2010","650","5773552","11.26","10.9462005020603"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2010","738","6547629","11.27","11.0313149359479"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2010","1394","9883640","14.1","13.9647878648593"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2010","397","5303925","7.49","7.35589740181756"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2010","334","2967297","11.26","11.3513840301959"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2010","998","5988927","16.66","17.0221755505002"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2010","118","989415","11.93","12.9444324938187"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2010","117","1826341","6.41","6.67025857399651"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2010","578","2700551","21.4","20.7529451813496"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2010","160","1316470","12.15","11.7162687482011"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2010","868","8791894","9.87","9.7712303677333"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2010","478","2059179","23.21","23.7531840979711"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2010","1557","19378102","8.03","7.7787121043771"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2010","1093","9535483","11.46","11.3886729618443"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2010","23","672591","3.42","3.38932672271273"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2010","1835","11536504","15.91","16.1590218029428"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2010","717","3751351","19.11","19.444059081795"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2010","503","3831074","13.13","12.976543873638"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2010","1916","12702379","15.08","15.3113385715636"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2010","167","1052567","15.87","15.6841937144869"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2010","678","4625364","14.66","14.6093831939738"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2010","45","814180","5.53","6.32579860439711"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2010","1080","6346105","17.02","16.9174593782135"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2010","2399","25145561","9.54","9.57621106895353"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2010","433","2763885","15.67","16.7701492929715"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2010","63","625741","10.07","9.71326610083705"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2010","558","8001024","6.97","6.81382947159319"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2010","916","6724540","13.62","13.1190137823969"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2010","512","1852994","27.63","29.1445066346784"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2010","630","5686986","11.08","10.9643321449512"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2010","85","563626","15.08","14.7889569965621"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2010","38329","308745538","12.41","."
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2011","552","4801108","11.5","11.7592599431199"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2011","107","722720","14.81","14.0349774074881"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2011","1071","6468732","16.56","16.8786313681078"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2011","355","2938538","12.08","12.6071043435243"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2011","4180","37700034","11.09","10.6764069868265"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2011","843","5119480","16.47","16.0331845876356"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2011","402","3589759","11.2","11.1986226351045"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2011","160","907916","17.62","17.590049370456"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2011","86","620472","13.86","13.6311510307894"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2011","2918","19105533","15.27","15.36844460533"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2011","1058","9812280","10.78","10.6515230802172"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2011","180","1378227","13.06","12.2800508331294"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2011","193","1584134","12.18","12.8793230934092"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2011","1408","12861882","10.95","10.9114151769369"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2011","975","6516845","14.96","15.3367738882992"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2011","250","3065389","8.16","8.46282782012338"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2011","280","2869917","9.76","10.1419323561493"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2011","1058","4367882","24.22","25.0618370896196"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2011","601","4575381","13.14","13.4202407472906"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2011","156","1328257","11.74","11.8449673045053"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2011","707","5844171","12.1","11.6876320642605"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2011","857","6611797","12.96","12.6686968666419"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2011","1386","9876589","14.03","14.3049707189684"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2011","511","5348119","9.55","9.32725210837316"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2011","302","2977999","10.14","10.7204761916596"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2011","963","6010587","16.02","16.4632003205361"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2011","141","997746","14.13","14.4009067525301"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2011","129","1842383","7","7.21105100288362"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2011","639","2718819","23.5","22.8113731840808"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2011","210","1318344","15.93","15.2987203599721"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2011","1012","8842934","11.44","11.2950745098502"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2011","529","2078226","25.45","26.3507990722385"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2011","1948","19523202","9.98","9.62842126856769"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2011","1264","9651025","13.1","13.0210564196394"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2011","16","685326","2.33","2.02900561423724"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2011","2025","11545442","17.54","17.7531145244117"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2011","703","3786626","18.57","18.9327418636966"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2011","532","3868509","13.75","13.5287106821141"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2011","2289","12745202","17.96","18.3264616570086"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2011","190","1051856","18.06","17.5516694913048"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2011","618","4672733","13.23","13.2840761380536"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2011","57","824289","6.92","7.07470408935234"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2011","1090","6398408","17.04","17.1788121391758"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2011","2589","25654464","10.09","10.0860810813043"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2011","504","2816440","17.89","19.4405641670245"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2011","83","626687","13.24","12.8299871146093"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2011","798","8110783","9.84","9.6845476383019"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2011","997","6823229","14.61","14.0369531621271"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2011","635","1854948","34.23","36.268080325611"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2011","698","5709720","12.22","12.0945480771906"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2011","85","567768","14.97","15.2611897380646"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2011","41340","311718857","13.26","."
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2012","562","4816089","11.67","12.0336877151973"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2012","129","731228","17.64","17.4084239110426"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2012","1134","6553262","17.3","17.650993257049"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2012","373","2949499","12.65","13.1672319751101"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2012","4040","38056055","10.62","10.1813574235917"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2012","807","5191731","15.54","14.9539023154538"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2012","439","3593541","12.22","12.1084489848487"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2012","141","917099","15.37","15.131859232416"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2012","77","635342","12.12","12.5847651759029"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2012","2597","19352021","13.42","13.2265106338071"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2012","1056","9917639","10.65","10.5512547516233"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2012","155","1392641","11.13","10.9606503216301"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2012","181","1596097","11.34","11.8830699113918"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2012","1628","12875167","12.64","12.5100363373454"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2012","1011","6538283","15.46","15.9842066394775"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2012","259","3076636","8.42","8.64785039094949"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2012","318","2886281","11.02","11.5014776810695"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2012","1078","4382667","24.6","24.9947638161114"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2012","566","4603676","12.29","12.3205374645375"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2012","150","1328888","11.29","11.601925111237"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2012","831","5890740","14.11","13.6287675273934"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2012","859","6657780","12.9","12.7058272491445"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2012","1308","9886879","13.23","13.4927089182825"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2012","482","5380443","8.96","8.87365098943405"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2012","310","2985660","10.38","10.6617474685736"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2012","942","6025468","15.63","16.1545704858554"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2012","118","1005157","11.74","11.8836392882945"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2012","146","1855973","7.87","7.8835347176933"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2012","602","2754874","21.85","20.8557556177475"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2012","173","1321393","13.09","13.5089181016955"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2012","1222","8874893","13.77","13.7430567189451"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2012","492","2084792","23.6","24.7840491312133"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2012","2106","19606981","10.74","10.3473859329373"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2012","1298","9747021","13.32","13.3046636477451"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2012","21","702265","2.99","3.17507809691331"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2012","2125","11551783","18.4","18.8936043687753"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2012","771","3817679","20.2","20.4268689048234"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2012","490","3899444","12.57","12.387131340075"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2012","2365","12772789","18.52","18.8330762930117"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2012","196","1052393","18.62","18.092956048875"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2012","587","4721341","12.43","12.435081518806"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2012","42","834631","5.03","5.42523302295507"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2012","1131","6455469","17.52","17.643657807091"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2012","2447","26089741","9.38","9.35180578954867"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2012","601","2856343","21.04","23.0540266904414"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2012","70","626398","11.18","11.0200867945322"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2012","733","8193374","8.95","8.85371761823835"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2012","985","6897292","14.28","13.688738164073"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2012","558","1856283","30.06","32.1904900173517"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2012","692","5726422","12.08","12.2096476034774"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2012","98","577080","16.98","16.8979571043027"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2012","41502","314102623","13.21","."
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2013","598","4830533","12.38","12.7557932161706"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2013","105","737442","14.24","14.3625424704522"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2013","1222","6630799","18.43","18.6496354427489"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2013","319","2957957","10.78","11.042657896333"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2013","4452","38414128","11.59","11.0306794118731"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2013","846","5271132","16.05","15.5217858800585"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2013","582","3597168","16.18","15.9689872977469"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2013","166","925353","17.94","18.6517585341535"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2013","102","649540","15.7","14.9160569205737"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2013","2474","19594467","12.63","12.5101313432201"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2013","1098","9991562","10.99","10.762326718828"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2013","158","1408765","11.22","10.8409576211776"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2013","207","1612785","12.83","13.4244287097179"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2013","1579","12889580","12.25","12.0212651571514"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2013","1064","6570518","16.19","16.5344971187753"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2013","275","3092224","8.89","9.2161338594963"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2013","331","2894630","11.43","11.8512344591324"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2013","1019","4398500","23.17","23.5820201235693"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2013","809","4627491","17.48","17.6592821387687"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2013","174","1328778","13.09","13.1653925937636"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2013","892","5936040","15.03","14.5009400641363"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2013","1081","6708810","16.11","15.9420887697938"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2013","1553","9900506","15.69","15.8426854510262"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2013","523","5420541","9.65","9.55191639658094"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2013","316","2990976","10.57","10.7918355023809"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2013","1025","6043708","16.96","17.4809302295456"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2013","137","1014402","13.51","14.4211164617903"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2013","117","1869300","6.26","6.40673745892769"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2013","614","2790366","22","20.9512551502356"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2013","203","1322660","15.35","14.9696930470624"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2013","1294","8907384","14.53","14.4012364230248"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2013","458","2086890","21.95","22.4489515014867"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2013","2309","19691032","11.73","11.1952439539891"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2013","1259","9845432","12.79","12.814730788524"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2013","20","723626","2.76","2.69832579549531"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2013","2347","11572232","20.28","20.8043164576068"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2013","790","3853405","20.5","20.4757773037784"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2013","455","3928030","11.58","11.2488068703677"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2013","2426","12783536","18.98","19.3806647378682"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2013","241","1052856","22.89","22.3855530159575"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2013","620","4768498","13","12.9810052898175"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2013","55","845270","6.51","6.91665868097566"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2013","1187","6496130","18.27","18.0997093210657"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2013","2446","26500674","9.23","9.21835607931523"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2013","594","2903685","20.46","21.9173192926595"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2013","93","627129","14.83","15.074502665299"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2013","854","8267875","10.33","10.1708566145535"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2013","969","6973281","13.9","13.3792142112987"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2013","570","1852985","30.76","32.1525871138987"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2013","856","5743653","14.9","15.0034885328168"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2013","98","583131","16.81","17.132217659381"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2013","43982","316427395","13.9","."
-"Both Sexes","All Races","Alabama","Both","All Ages","2001","2014","Drug Poisoning","2014","723","4846411","14.92","15.108978765727"
-"Both Sexes","All Races","Alaska","Both","All Ages","2001","2014","Drug Poisoning","2014","124","737046","16.82","16.6418403528941"
-"Both Sexes","All Races","Arizona","Both","All Ages","2001","2014","Drug Poisoning","2014","1211","6728783","18","18.1332469477362"
-"Both Sexes","All Races","Arkansas","Both","All Ages","2001","2014","Drug Poisoning","2014","356","2966835","12","12.5883013781014"
-"Both Sexes","All Races","California","Both","All Ages","2001","2014","Drug Poisoning","2014","4521","38792291","11.65","11.0234858240771"
-"Both Sexes","All Races","Colorado","Both","All Ages","2001","2014","Drug Poisoning","2014","899","5355588","16.79","16.2491070194072"
-"Both Sexes","All Races","Connecticut","Both","All Ages","2001","2014","Drug Poisoning","2014","623","3594762","17.33","17.5365748067889"
-"Both Sexes","All Races","Delaware","Both","All Ages","2001","2014","Drug Poisoning","2014","189","935968","20.19","21.2767829208384"
-"Both Sexes","All Races","District of Columbia","Both","All Ages","2001","2014","Drug Poisoning","2014","96","659836","14.55","13.8620315860559"
-"Both Sexes","All Races","Florida","Both","All Ages","2001","2014","Drug Poisoning","2014","2634","19905569","13.23","13.1612526756671"
-"Both Sexes","All Races","Georgia","Both","All Ages","2001","2014","Drug Poisoning","2014","1206","10097132","11.94","11.836660583034"
-"Both Sexes","All Races","Hawaii","Both","All Ages","2001","2014","Drug Poisoning","2014","157","1420257","11.05","10.700029536106"
-"Both Sexes","All Races","Idaho","Both","All Ages","2001","2014","Drug Poisoning","2014","212","1634806","12.97","13.7093772961835"
-"Both Sexes","All Races","Illinois","Both","All Ages","2001","2014","Drug Poisoning","2014","1705","12882189","13.24","13.0658894209476"
-"Both Sexes","All Races","Indiana","Both","All Ages","2001","2014","Drug Poisoning","2014","1172","6597880","17.76","18.1564829980549"
-"Both Sexes","All Races","Iowa","Both","All Ages","2001","2014","Drug Poisoning","2014","264","3109481","8.49","8.77810334531232"
-"Both Sexes","All Races","Kansas","Both","All Ages","2001","2014","Drug Poisoning","2014","332","2902507","11.44","11.7111430075146"
-"Both Sexes","All Races","Kentucky","Both","All Ages","2001","2014","Drug Poisoning","2014","1077","4412617","24.41","24.7715349139823"
-"Both Sexes","All Races","Louisiana","Both","All Ages","2001","2014","Drug Poisoning","2014","777","4648990","16.71","16.8920640563292"
-"Both Sexes","All Races","Maine","Both","All Ages","2001","2014","Drug Poisoning","2014","216","1330256","16.24","17.0968198384111"
-"Both Sexes","All Races","Maryland","Both","All Ages","2001","2014","Drug Poisoning","2014","1070","5975346","17.91","17.3583787501367"
-"Both Sexes","All Races","Massachusetts","Both","All Ages","2001","2014","Drug Poisoning","2014","1289","6755124","19.08","19.0031812181694"
-"Both Sexes","All Races","Michigan","Both","All Ages","2001","2014","Drug Poisoning","2014","1762","9916306","17.77","17.9362343330115"
-"Both Sexes","All Races","Minnesota","Both","All Ages","2001","2014","Drug Poisoning","2014","517","5457125","9.47","9.53080428201812"
-"Both Sexes","All Races","Mississippi","Both","All Ages","2001","2014","Drug Poisoning","2014","336","2993443","11.22","11.6037106541668"
-"Both Sexes","All Races","Missouri","Both","All Ages","2001","2014","Drug Poisoning","2014","1067","6063827","17.6","18.1780438736109"
-"Both Sexes","All Races","Montana","Both","All Ages","2001","2014","Drug Poisoning","2014","125","1023252","12.22","12.4708906670992"
-"Both Sexes","All Races","Nebraska","Both","All Ages","2001","2014","Drug Poisoning","2014","125","1882980","6.64","7.044483399291"
-"Both Sexes","All Races","Nevada","Both","All Ages","2001","2014","Drug Poisoning","2014","545","2838281","19.2","18.3440044312512"
-"Both Sexes","All Races","New Hampshire","Both","All Ages","2001","2014","Drug Poisoning","2014","334","1327996","25.15","26.0436102067411"
-"Both Sexes","All Races","New Jersey","Both","All Ages","2001","2014","Drug Poisoning","2014","1253","8938844","14.02","13.9501770309872"
-"Both Sexes","All Races","New Mexico","Both","All Ages","2001","2014","Drug Poisoning","2014","547","2085567","26.23","27.1631112355988"
-"Both Sexes","All Races","New York","Both","All Ages","2001","2014","Drug Poisoning","2014","2300","19748858","11.65","11.1956131602166"
-"Both Sexes","All Races","North Carolina","Both","All Ages","2001","2014","Drug Poisoning","2014","1358","9940387","13.66","13.7414673919614"
-"Both Sexes","All Races","North Dakota","Both","All Ages","2001","2014","Drug Poisoning","2014","43","740040","5.81","6.35139682419915"
-"Both Sexes","All Races","Ohio","Both","All Ages","2001","2014","Drug Poisoning","2014","2744","11596998","23.66","24.6112255775228"
-"Both Sexes","All Races","Oklahoma","Both","All Ages","2001","2014","Drug Poisoning","2014","777","3879610","20.03","20.3555960379064"
-"Both Sexes","All Races","Oregon","Both","All Ages","2001","2014","Drug Poisoning","2014","522","3971202","13.14","12.8300638583234"
-"Both Sexes","All Races","Pennsylvania","Both","All Ages","2001","2014","Drug Poisoning","2014","2732","12793767","21.35","21.8678327802081"
-"Both Sexes","All Races","Rhode Island","Both","All Ages","2001","2014","Drug Poisoning","2014","247","1054907","23.41","23.476941223897"
-"Both Sexes","All Races","South Carolina","Both","All Ages","2001","2014","Drug Poisoning","2014","701","4829160","14.52","14.399870889188"
-"Both Sexes","All Races","South Dakota","Both","All Ages","2001","2014","Drug Poisoning","2014","63","853304","7.38","7.99700821906112"
-"Both Sexes","All Races","Tennessee","Both","All Ages","2001","2014","Drug Poisoning","2014","1269","6547779","19.38","19.540962405183"
-"Both Sexes","All Races","Texas","Both","All Ages","2001","2014","Drug Poisoning","2014","2601","26979078","9.64","9.63838816164077"
-"Both Sexes","All Races","Utah","Both","All Ages","2001","2014","Drug Poisoning","2014","603","2944498","20.48","22.333200248183"
-"Both Sexes","All Races","Vermont","Both","All Ages","2001","2014","Drug Poisoning","2014","83","626767","13.24","14.0229940384187"
-"Both Sexes","All Races","Virginia","Both","All Ages","2001","2014","Drug Poisoning","2014","980","8328098","11.77","11.6736471502743"
-"Both Sexes","All Races","Washington","Both","All Ages","2001","2014","Drug Poisoning","2014","979","7063166","13.86","13.2231569351365"
-"Both Sexes","All Races","West Virginia","Both","All Ages","2001","2014","Drug Poisoning","2014","627","1848751","33.91","35.6228038641179"
-"Both Sexes","All Races","Wisconsin","Both","All Ages","2001","2014","Drug Poisoning","2014","853","5759432","14.81","14.9673031648927"
-"Both Sexes","All Races","Wyoming","Both","All Ages","2001","2014","Drug Poisoning","2014","109","584304","18.65","19.252397630102"
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","2014","47055","318907401","14.76","."
-"Both Sexes","All Races","","Both","All Ages","2001","2014","Drug Poisoning","X","482031","4231402406","11.39","."
+FIPS,State,Year,Deaths,Population,CrudeRate1,Alabama,2000,197,4447100,4.432,Alaska,2000,48,626932,7.664,Arizona,2000,522,5130632,10.175,Arkansas,2000,140,2673400,5.246,California,2000,1941,33871648,5.738,Colorado,2000,352,4301261,8.189,Connecticut,2000,320,3405565,9.410,Delaware,2000,55,783600,7.0211,District of Columbia,2000,76,572059,13.2912,Florida,2000,1159,15982378,7.2513,Georgia,2000,364,8186453,4.4515,Hawaii,2000,63,1211537,5.216,Idaho,2000,64,1293953,4.9517,Illinois,2000,868,12419293,6.9918,Indiana,2000,214,6080485,3.5219,Iowa,2000,73,2926324,2.4920,Kansas,2000,103,2688418,3.8321,Kentucky,2000,241,4041769,5.9622,Louisiana,2000,248,4468976,5.5523,Maine,2000,61,1274923,4.7824,Maryland,2000,623,5296486,11.7625,Massachusetts,2000,463,6349097,7.2926,Michigan,2000,561,9938444,5.6427,Minnesota,2000,130,4919479,2.6428,Mississippi,2000,114,2844658,4.0129,Missouri,2000,303,5595211,5.4230,Montana,2000,41,902195,4.5431,Nebraska,2000,46,1711263,2.6932,Nevada,2000,273,1998257,13.6633,New Hampshire,2000,45,1235786,3.6434,New Jersey,2000,643,8414350,7.6435,New Mexico,2000,271,1819046,14.936,New York,2000,767,18976457,4.0437,North Carolina,2000,491,8049313,6.138,North Dakota,2000,14,642200,2.1839,Ohio,2000,563,11353140,4.9640,Oklahoma,2000,237,3450654,6.8741,Oregon,2000,208,3421399,6.0842,Pennsylvania,2000,1147,12281054,9.3444,Rhode Island,2000,74,1048319,7.0645,South Carolina,2000,258,4012012,6.4346,South Dakota,2000,20,754844,2.6547,Tennessee,2000,397,5689283,6.9848,Texas,2000,1021,20851820,4.949,Utah,2000,210,2233169,9.450,Vermont,2000,36,608827,5.9151,Virginia,2000,411,7078515,5.8153,Washington,2000,556,5894121,9.4354,West Virginia,2000,113,1808344,6.2555,Wisconsin,2000,248,5363675,4.6256,Wyoming,2000,22,493782,4.46,,2000,17415,281421906,6.191,Alabama,2001,216,4467634,4.832,Alaska,2001,62,633714,9.784,Arizona,2001,552,5273477,10.475,Arkansas,2001,126,2691571,4.686,California,2001,1226,34479458,3.568,Colorado,2001,411,4425687,9.299,Connecticut,2001,307,3432835,8.9410,Delaware,2001,64,795699,8.0411,District of Columbia,2001,93,574504,16.1912,Florida,2001,1746,16356966,10.6713,Georgia,2001,511,8377038,6.115,Hawaii,2001,77,1225948,6.2816,Idaho,2001,98,1319962,7.4217,Illinois,2001,892,12488445,7.1418,Indiana,2001,283,6127760,4.6219,Iowa,2001,87,2931997,2.9720,Kansas,2001,138,2702162,5.1121,Kentucky,2001,345,4068132,8.4822,Louisiana,2001,265,4477875,5.9223,Maine,2001,85,1285692,6.6124,Maryland,2001,639,5374691,11.8925,Massachusetts,2001,689,6397634,10.7726,Michigan,2001,621,9991120,6.2227,Minnesota,2001,185,4982796,3.7128,Mississippi,2001,169,2852994,5.9229,Missouri,2001,351,5641142,6.2230,Montana,2001,56,906961,6.1731,Nebraska,2001,66,1719836,3.8432,Nevada,2001,261,2098399,12.4433,New Hampshire,2001,79,1255517,6.2934,New Jersey,2001,705,8492671,8.335,New Mexico,2001,258,1831690,14.0936,New York,2001,1079,19082838,5.6537,North Carolina,2001,551,8210122,6.7138,North Dakota,2001,14,639062,2.1939,Ohio,2001,737,11387404,6.4740,Oklahoma,2001,269,3467100,7.7641,Oregon,2001,241,3467937,6.9542,Pennsylvania,2001,958,12298970,7.7944,Rhode Island,2001,110,1057142,10.4145,South Carolina,2001,242,4064995,5.9546,South Dakota,2001,24,757972,3.1747,Tennessee,2001,424,5750789,7.3748,Texas,2001,1374,21319622,6.4449,Utah,2001,209,2283715,9.1550,Vermont,2001,44,612223,7.1951,Virginia,2001,459,7198362,6.3853,Washington,2001,499,5985722,8.3454,West Virginia,2001,206,1801481,11.4455,Wisconsin,2001,269,5406835,4.9856,Wyoming,2001,22,494657,4.45,,2001,19394,284968955,6.811,Alabama,2002,211,4480089,4.712,Alaska,2002,84,642337,13.084,Arizona,2002,624,5396255,11.565,Arkansas,2002,176,2705927,6.56,California,2002,2975,34871843,8.538,Colorado,2002,448,4490406,9.989,Connecticut,2002,354,3458749,10.2310,Delaware,2002,84,806169,10.4211,District of Columbia,2002,61,573158,10.6412,Florida,2002,1927,16689370,11.5513,Georgia,2002,563,8508256,6.6215,Hawaii,2002,77,1239613,6.2116,Idaho,2002,117,1340372,8.7317,Illinois,2002,986,12525556,7.8718,Indiana,2002,293,6155967,4.7619,Iowa,2002,91,2934234,3.120,Kansas,2002,170,2713535,6.2621,Kentucky,2002,426,4089875,10.4222,Louisiana,2002,365,4497267,8.1223,Maine,2002,139,1295960,10.7324,Maryland,2002,723,5440389,13.2925,Massachusetts,2002,705,6417206,10.9926,Michigan,2002,751,10015710,7.527,Minnesota,2002,201,5018935,428,Mississippi,2002,183,2858681,6.429,Missouri,2002,416,5674825,7.3330,Montana,2002,78,911667,8.5631,Nebraska,2002,66,1728292,3.8232,Nevada,2002,323,2173791,14.8633,New Hampshire,2002,111,1269089,8.7534,New Jersey,2002,813,8552643,9.5135,New Mexico,2002,287,1855309,15.4736,New York,2002,923,19137800,4.8237,North Carolina,2002,647,8326201,7.7738,North Dakota,2002,17,638168,2.6639,Ohio,2002,931,11407889,8.1640,Oklahoma,2002,240,3489080,6.8841,Oregon,2002,318,3513424,9.0542,Pennsylvania,2002,1097,12331031,8.944,Rhode Island,2002,99,1065995,9.2945,South Carolina,2002,217,4107795,5.2846,South Dakota,2002,22,760020,2.8947,Tennessee,2002,491,5795918,8.4748,Texas,2002,1598,21690325,7.3749,Utah,2002,288,2324815,12.3950,Vermont,2002,47,615442,7.6451,Virginia,2002,509,7286873,6.9953,Washington,2002,643,6052349,10.6254,West Virginia,2002,229,1805414,12.6855,Wisconsin,2002,340,5445162,6.2456,Wyoming,2002,34,500017,6.8,,2002,23518,287625193,8.181,Alabama,2003,197,4503491,4.372,Alaska,2003,83,648414,12.84,Arizona,2003,674,5510364,12.235,Arkansas,2003,184,2724816,6.756,California,2003,3108,35253159,8.828,Colorado,2003,502,4528732,11.089,Connecticut,2003,307,3484336,8.8110,Delaware,2003,77,818003,9.4111,District of Columbia,2003,103,568502,18.1212,Florida,2003,2054,17004085,12.0813,Georgia,2003,607,8622793,7.0415,Hawaii,2003,92,1251154,7.3516,Idaho,2003,102,1363380,7.4817,Illinois,2003,847,12556006,6.7518,Indiana,2003,434,6196638,719,Iowa,2003,96,2941999,3.2620,Kansas,2003,188,2723004,6.921,Kentucky,2003,560,4117170,13.622,Louisiana,2003,536,4521042,11.8623,Maine,2003,133,1306513,10.1824,Maryland,2003,779,5496269,14.1725,Massachusetts,2003,823,6422565,12.8126,Michigan,2003,761,10041152,7.5827,Minnesota,2003,246,5053572,4.8728,Mississippi,2003,207,2868312,7.2229,Missouri,2003,522,5709403,9.1430,Montana,2003,93,919630,10.1131,Nebraska,2003,55,1738643,3.1632,Nevada,2003,342,2248850,15.2133,New Hampshire,2003,127,1279840,9.9234,New Jersey,2003,721,8601402,8.3835,New Mexico,2003,358,1877574,19.0736,New York,2003,964,19175939,5.0337,North Carolina,2003,762,8422501,9.0538,North Dakota,2003,22,638817,3.4439,Ohio,2003,775,11434788,6.7840,Oklahoma,2003,400,3504892,11.4141,Oregon,2003,355,3547376,10.0142,Pennsylvania,2003,1381,12374658,11.1644,Rhode Island,2003,146,1071342,13.6345,South Carolina,2003,287,4150297,6.9246,South Dakota,2003,24,763729,3.1447,Tennessee,2003,662,5847812,11.3248,Texas,2003,1753,22030931,7.9649,Utah,2003,353,2360137,14.9650,Vermont,2003,65,617858,10.5251,Virginia,2003,547,7366977,7.4353,Washington,2003,696,6104115,11.454,West Virginia,2003,262,1812295,14.4655,Wisconsin,2003,383,5479203,6.9956,Wyoming,2003,30,503453,5.96,,2003,25785,290107933,8.891,Alabama,2004,283,4530729,6.252,Alaska,2004,86,659286,13.044,Arizona,2004,744,5652404,13.165,Arkansas,2004,230,2749686,8.366,California,2004,3125,35574576,8.788,Colorado,2004,518,4575013,11.329,Connecticut,2004,333,3496094,9.5210,Delaware,2004,63,830803,7.5811,District of Columbia,2004,87,567754,15.3212,Florida,2004,2264,17415318,1313,Georgia,2004,666,8769252,7.5915,Hawaii,2004,103,1273569,8.0916,Idaho,2004,98,1391802,7.0417,Illinois,2004,1035,12589773,8.2218,Indiana,2004,542,6233007,8.719,Iowa,2004,122,2953635,4.1320,Kansas,2004,224,2734373,8.1921,Kentucky,2004,526,4146101,12.6922,Louisiana,2004,539,4552238,11.8423,Maine,2004,140,1313688,10.6624,Maryland,2004,676,5546935,12.1925,Massachusetts,2004,669,6412281,10.4326,Michigan,2004,867,10055315,8.6227,Minnesota,2004,250,5087713,4.9128,Mississippi,2004,224,2889010,7.7529,Missouri,2004,548,5747741,9.5330,Montana,2004,98,930009,10.5431,Nebraska,2004,59,1749370,3.3732,Nevada,2004,380,2346222,16.233,New Hampshire,2004,124,1290121,9.6134,New Jersey,2004,590,8634561,6.8335,New Mexico,2004,314,1903808,16.4936,New York,2004,831,19171567,4.3337,North Carolina,2004,854,8553152,9.9838,North Dakota,2004,17,644705,2.6439,Ohio,2004,1136,11452251,9.9240,Oklahoma,2004,476,3525233,13.541,Oregon,2004,365,3569463,10.2342,Pennsylvania,2004,1544,12410722,12.4444,Rhode Island,2004,106,1074579,9.8645,South Carolina,2004,356,4210921,8.4546,South Dakota,2004,43,770396,5.5847,Tennessee,2004,763,5910809,12.9148,Texas,2004,1813,22394023,8.149,Utah,2004,358,2401580,14.9150,Vermont,2004,50,619920,8.0751,Virginia,2004,558,7475575,7.4653,Washington,2004,811,6178645,13.1354,West Virginia,2004,333,1816438,18.3355,Wisconsin,2004,437,5514026,7.9356,Wyoming,2004,46,509106,9.04,,2004,27424,292805298,9.371,Alabama,2005,283,4569805,6.192,Alaska,2005,79,666946,11.854,Arizona,2005,794,5839077,13.65,Arkansas,2005,269,2781097,9.676,California,2005,3214,35827943,8.978,Colorado,2005,608,4631888,13.139,Connecticut,2005,295,3506956,8.4110,Delaware,2005,62,845150,7.3411,District of Columbia,2005,77,567136,13.5812,Florida,2005,2371,17842038,13.2913,Georgia,2005,738,8925922,8.2715,Hawaii,2005,126,1292729,9.7516,Idaho,2005,109,1428241,7.6317,Illinois,2005,1067,12609903,8.4618,Indiana,2005,610,6278616,9.7219,Iowa,2005,141,2964454,4.7620,Kansas,2005,241,2745299,8.7821,Kentucky,2005,638,4182742,15.2522,Louisiana,2005,661,4576628,14.4423,Maine,2005,163,1318787,12.3624,Maryland,2005,656,5592379,11.7325,Massachusetts,2005,780,6403290,12.1826,Michigan,2005,985,10051137,9.827,Minnesota,2005,282,5119598,5.5128,Mississippi,2005,248,2905943,8.5329,Missouri,2005,608,5790300,10.530,Montana,2005,96,940102,10.2131,Nebraska,2005,86,1761497,4.8832,Nevada,2005,457,2432143,18.7933,New Hampshire,2005,142,1298492,10.9434,New Jersey,2005,823,8651974,9.5135,New Mexico,2005,373,1932274,19.336,New York,2005,944,19132610,4.9337,North Carolina,2005,1000,8705407,11.4938,North Dakota,2005,12,646089,1.8639,Ohio,2005,1243,11463320,10.8440,Oklahoma,2005,478,3548597,13.4741,Oregon,2005,386,3613202,10.6842,Pennsylvania,2005,1613,12449990,12.9644,Rhode Island,2005,156,1067916,14.6145,South Carolina,2005,427,4270150,1046,South Dakota,2005,40,775493,5.1647,Tennessee,2005,872,5991057,14.5648,Texas,2005,1910,22778123,8.3949,Utah,2005,438,2457719,17.8250,Vermont,2005,53,621215,8.5351,Virginia,2005,581,7577105,7.6753,Washington,2005,850,6257305,13.5854,West Virginia,2005,184,1820492,10.1155,Wisconsin,2005,518,5546166,9.3456,Wyoming,2005,26,514157,5.06,,2005,29813,295516599,10.091,Alabama,2006,398,4628981,8.62,Alaska,2006,76,675302,11.254,Arizona,2006,876,6029141,14.535,Arkansas,2006,285,2821761,10.16,California,2006,3494,36021202,9.78,Colorado,2006,627,4720423,13.289,Connecticut,2006,407,3517460,11.5710,Delaware,2006,78,859268,9.0811,District of Columbia,2006,101,570681,17.712,Florida,2006,2591,18166990,14.2613,Georgia,2006,830,9155813,9.0715,Hawaii,2006,86,1309731,6.5716,Idaho,2006,130,1468669,8.8517,Illinois,2006,1369,12643955,10.8318,Indiana,2006,736,6332669,11.6219,Iowa,2006,187,2982644,6.2720,Kansas,2006,257,2762931,9.321,Kentucky,2006,728,4219239,17.2522,Louisiana,2006,705,4302665,16.3923,Maine,2006,159,1323619,12.0124,Maryland,2006,762,5627367,13.5425,Massachusetts,2006,970,6410084,15.1326,Michigan,2006,1176,10036081,11.7227,Minnesota,2006,311,5163555,6.0228,Mississippi,2006,339,2904978,11.6729,Missouri,2006,743,5842704,12.7230,Montana,2006,97,952692,10.1831,Nebraska,2006,91,1772693,5.1332,Nevada,2006,461,2522658,18.2733,New Hampshire,2006,149,1308389,11.3934,New Jersey,2006,847,8661679,9.7835,New Mexico,2006,418,1962137,21.336,New York,2006,1680,19104631,8.7937,North Carolina,2006,1059,8917270,11.8838,North Dakota,2006,14,649422,2.1639,Ohio,2006,1515,11481213,13.240,Oklahoma,2006,563,3594090,15.6641,Oregon,2006,485,3670883,13.2142,Pennsylvania,2006,1638,12510809,13.0944,Rhode Island,2006,175,1063096,16.4645,South Carolina,2006,554,4357847,12.7146,South Dakota,2006,37,783033,4.7347,Tennessee,2006,975,6088766,16.0148,Texas,2006,2191,23359580,9.3849,Utah,2006,444,2525507,17.5850,Vermont,2006,75,622892,12.0451,Virginia,2006,629,7673725,8.253,Washington,2006,897,6370753,14.0854,West Virginia,2006,362,1827912,19.855,Wisconsin,2006,593,5577655,10.6356,Wyoming,2006,55,522667,10.52,,2006,34425,298379912,11.541,Alabama,2007,511,4672840,10.942,Alaska,2007,72,680300,10.584,Arizona,2007,943,6167681,15.295,Arkansas,2007,301,2848650,10.576,California,2007,3854,36250311,10.638,Colorado,2007,734,4803868,15.289,Connecticut,2007,433,3527270,12.2810,Delaware,2007,97,871749,11.1311,District of Columbia,2007,61,574404,10.6212,Florida,2007,2794,18367842,15.2113,Georgia,2007,923,9349988,9.8715,Hawaii,2007,136,1315675,10.3416,Idaho,2007,126,1505105,8.3717,Illinois,2007,1192,12695866,9.3918,Indiana,2007,781,6379599,12.2419,Iowa,2007,203,2999212,6.7720,Kansas,2007,270,2783785,9.721,Kentucky,2007,708,4256672,16.6322,Louisiana,2007,808,4375581,18.4723,Maine,2007,159,1327040,11.9824,Maryland,2007,769,5653408,13.625,Massachusetts,2007,922,6431559,14.3426,Michigan,2007,1236,10001284,12.3627,Minnesota,2007,341,5207203,6.5528,Mississippi,2007,314,2928350,10.7229,Missouri,2007,714,5887612,12.1330,Montana,2007,125,964706,12.9631,Nebraska,2007,80,1783440,4.4932,Nevada,2007,499,2601072,19.1833,New Hampshire,2007,186,1312540,14.1734,New Jersey,2007,727,8677885,8.3835,New Mexico,2007,462,1990070,23.2236,New York,2007,1708,19132335,8.9337,North Carolina,2007,1084,9118037,11.8938,North Dakota,2007,32,652822,4.939,Ohio,2007,1592,11500468,13.8440,Oklahoma,2007,666,3634349,18.3341,Oregon,2007,502,3722417,13.4942,Pennsylvania,2007,1733,12563937,13.7944,Rhode Island,2007,135,1057315,12.7745,South Carolina,2007,545,4444110,12.2646,South Dakota,2007,32,791623,4.0447,Tennessee,2007,985,6175727,15.9548,Texas,2007,2194,23831983,9.2149,Utah,2007,511,2597746,19.6750,Vermont,2007,66,623481,10.5951,Virginia,2007,700,7751000,9.0353,Washington,2007,962,6461587,14.8954,West Virginia,2007,397,1834052,21.6555,Wisconsin,2007,622,5610775,11.0956,Wyoming,2007,63,534876,11.78,,2007,36010,301231207,11.951,Alabama,2008,607,4718206,12.872,Alaska,2008,127,687455,18.474,Arizona,2008,828,6280362,13.185,Arkansas,2008,360,2874554,12.526,California,2008,3863,36604337,10.558,Colorado,2008,749,4889730,15.329,Connecticut,2008,386,3545579,10.8910,Delaware,2008,124,883874,14.0311,District of Columbia,2008,56,580236,9.6512,Florida,2008,2963,18527305,15.9913,Georgia,2008,935,9504843,9.8415,Hawaii,2008,123,1332213,9.2316,Idaho,2008,146,1534320,9.5217,Illinois,2008,1353,12747038,10.6118,Indiana,2008,830,6424806,12.9219,Iowa,2008,209,3016734,6.9320,Kansas,2008,219,2808076,7.821,Kentucky,2008,764,4289878,17.8122,Louisiana,2008,647,4435586,14.5923,Maine,2008,162,1330509,12.1824,Maryland,2008,693,5684965,12.1925,Massachusetts,2008,786,6468967,12.1526,Michigan,2008,1239,9946889,12.4627,Minnesota,2008,384,5247018,7.3228,Mississippi,2008,303,2947806,10.2829,Missouri,2008,765,5923916,12.9130,Montana,2008,134,976415,13.7231,Nebraska,2008,94,1796378,5.2332,Nevada,2008,519,2653630,19.5633,New Hampshire,2008,126,1315906,9.5834,New Jersey,2008,702,8711090,8.0635,New Mexico,2008,518,2010662,25.7636,New York,2008,1691,19212436,8.837,North Carolina,2008,1196,9309449,12.8538,North Dakota,2008,46,657569,739,Ohio,2008,1733,11515391,15.0540,Oklahoma,2008,564,3668976,15.3741,Oregon,2008,452,3768748,11.9942,Pennsylvania,2008,1850,12612285,14.6744,Rhode Island,2008,185,1055003,17.5445,South Carolina,2008,565,4528996,12.4846,South Dakota,2008,54,799124,6.7647,Tennessee,2008,938,6247411,15.0148,Texas,2008,2053,24309039,8.4549,Utah,2008,468,2663029,17.5750,Vermont,2008,73,624151,11.751,Virginia,2008,718,7833496,9.1753,Washington,2008,1011,6562231,15.4154,West Virginia,2008,459,1840310,24.9455,Wisconsin,2008,606,5640996,10.7456,Wyoming,2008,74,546043,13.55,,2008,36450,304093966,11.991,Alabama,2009,630,4757938,13.242,Alaska,2009,131,698895,18.744,Arizona,2009,1002,6343154,15.85,Arkansas,2009,351,2896843,12.126,California,2009,4056,36961229,10.978,Colorado,2009,769,4972195,15.479,Connecticut,2009,393,3561807,11.0310,Delaware,2009,136,891730,15.2511,District of Columbia,2009,26,592228,4.3912,Florida,2009,3092,18652644,16.5813,Georgia,2009,1007,9620846,10.4715,Hawaii,2009,136,1346717,10.116,Idaho,2009,171,1554439,1117,Illinois,2009,1381,12796778,10.7918,Indiana,2009,896,6459325,13.8719,Iowa,2009,207,3032870,6.8320,Kansas,2009,304,2832704,10.7321,Kentucky,2009,769,4317074,17.8122,Louisiana,2009,584,4491648,1323,Maine,2009,173,1329590,13.0124,Maryland,2009,743,5730388,12.9725,Massachusetts,2009,816,6517613,12.5226,Michigan,2009,1429,9901591,14.4327,Minnesota,2009,419,5281203,7.9328,Mississippi,2009,323,2958774,10.9229,Missouri,2009,863,5961088,14.4830,Montana,2009,142,983982,14.4331,Nebraska,2009,106,1812683,5.8532,Nevada,2009,550,2684665,20.4933,New Hampshire,2009,168,1316102,12.7634,New Jersey,2009,263,8755602,335,New Mexico,2009,438,2036802,21.536,New York,2009,1592,19307066,8.2537,North Carolina,2009,1191,9449566,12.638,North Dakota,2009,27,664968,4.0639,Ohio,2009,1236,11528896,10.7240,Oklahoma,2009,756,3717572,20.3441,Oregon,2009,501,3808600,13.1542,Pennsylvania,2009,1909,12666858,15.0744,Rhode Island,2009,161,1053646,15.2845,South Carolina,2009,615,4589872,13.446,South Dakota,2009,49,807067,6.0747,Tennessee,2009,962,6306019,15.2648,Texas,2009,2409,24801761,9.7149,Utah,2009,478,2723421,17.5550,Vermont,2009,55,624817,8.851,Virginia,2009,685,7925937,8.6453,Washington,2009,987,6667426,14.854,West Virginia,2009,226,1847775,12.2355,Wisconsin,2009,631,5669264,11.1356,Wyoming,2009,60,559851,10.72,,2009,37004,306771529,12.061,Alabama,2010,547,4779736,11.442,Alaska,2010,83,710231,11.694,Arizona,2010,1098,6392017,17.185,Arkansas,2010,350,2915918,126,California,2010,4057,37253956,10.898,Colorado,2010,654,5029196,139,Connecticut,2010,363,3574097,10.1610,Delaware,2010,145,897934,16.1511,District of Columbia,2010,78,601723,12.9612,Florida,2010,3061,18801310,16.2813,Georgia,2010,1054,9687653,10.8815,Hawaii,2010,151,1360301,11.116,Idaho,2010,178,1567582,11.3617,Illinois,2010,1288,12830632,10.0418,Indiana,2010,927,6483802,14.319,Iowa,2010,253,3046355,8.3120,Kansas,2010,269,2853118,9.4321,Kentucky,2010,1007,4339367,23.2122,Louisiana,2010,591,4533372,13.0423,Maine,2010,135,1328361,10.1624,Maryland,2010,650,5773552,11.2625,Massachusetts,2010,738,6547629,11.2726,Michigan,2010,1394,9883640,14.127,Minnesota,2010,397,5303925,7.4928,Mississippi,2010,334,2967297,11.2629,Missouri,2010,998,5988927,16.6630,Montana,2010,118,989415,11.9331,Nebraska,2010,117,1826341,6.4132,Nevada,2010,578,2700551,21.433,New Hampshire,2010,160,1316470,12.1534,New Jersey,2010,868,8791894,9.8735,New Mexico,2010,478,2059179,23.2136,New York,2010,1557,19378102,8.0337,North Carolina,2010,1093,9535483,11.4638,North Dakota,2010,23,672591,3.4239,Ohio,2010,1835,11536504,15.9140,Oklahoma,2010,717,3751351,19.1141,Oregon,2010,503,3831074,13.1342,Pennsylvania,2010,1916,12702379,15.0844,Rhode Island,2010,167,1052567,15.8745,South Carolina,2010,678,4625364,14.6646,South Dakota,2010,45,814180,5.5347,Tennessee,2010,1080,6346105,17.0248,Texas,2010,2399,25145561,9.5449,Utah,2010,433,2763885,15.6750,Vermont,2010,63,625741,10.0751,Virginia,2010,558,8001024,6.9753,Washington,2010,916,6724540,13.6254,West Virginia,2010,512,1852994,27.6355,Wisconsin,2010,630,5686986,11.0856,Wyoming,2010,85,563626,15.08,,2010,38329,308745538,12.411,Alabama,2011,552,4801108,11.52,Alaska,2011,107,722720,14.814,Arizona,2011,1071,6468732,16.565,Arkansas,2011,355,2938538,12.086,California,2011,4180,37700034,11.098,Colorado,2011,843,5119480,16.479,Connecticut,2011,402,3589759,11.210,Delaware,2011,160,907916,17.6211,District of Columbia,2011,86,620472,13.8612,Florida,2011,2918,19105533,15.2713,Georgia,2011,1058,9812280,10.7815,Hawaii,2011,180,1378227,13.0616,Idaho,2011,193,1584134,12.1817,Illinois,2011,1408,12861882,10.9518,Indiana,2011,975,6516845,14.9619,Iowa,2011,250,3065389,8.1620,Kansas,2011,280,2869917,9.7621,Kentucky,2011,1058,4367882,24.2222,Louisiana,2011,601,4575381,13.1423,Maine,2011,156,1328257,11.7424,Maryland,2011,707,5844171,12.125,Massachusetts,2011,857,6611797,12.9626,Michigan,2011,1386,9876589,14.0327,Minnesota,2011,511,5348119,9.5528,Mississippi,2011,302,2977999,10.1429,Missouri,2011,963,6010587,16.0230,Montana,2011,141,997746,14.1331,Nebraska,2011,129,1842383,732,Nevada,2011,639,2718819,23.533,New Hampshire,2011,210,1318344,15.9334,New Jersey,2011,1012,8842934,11.4435,New Mexico,2011,529,2078226,25.4536,New York,2011,1948,19523202,9.9837,North Carolina,2011,1264,9651025,13.138,North Dakota,2011,16,685326,2.3339,Ohio,2011,2025,11545442,17.5440,Oklahoma,2011,703,3786626,18.5741,Oregon,2011,532,3868509,13.7542,Pennsylvania,2011,2289,12745202,17.9644,Rhode Island,2011,190,1051856,18.0645,South Carolina,2011,618,4672733,13.2346,South Dakota,2011,57,824289,6.9247,Tennessee,2011,1090,6398408,17.0448,Texas,2011,2589,25654464,10.0949,Utah,2011,504,2816440,17.8950,Vermont,2011,83,626687,13.2451,Virginia,2011,798,8110783,9.8453,Washington,2011,997,6823229,14.6154,West Virginia,2011,635,1854948,34.2355,Wisconsin,2011,698,5709720,12.2256,Wyoming,2011,85,567768,14.97,,2011,41340,311718857,13.261,Alabama,2012,562,4816089,11.672,Alaska,2012,129,731228,17.644,Arizona,2012,1134,6553262,17.35,Arkansas,2012,373,2949499,12.656,California,2012,4040,38056055,10.628,Colorado,2012,807,5191731,15.549,Connecticut,2012,439,3593541,12.2210,Delaware,2012,141,917099,15.3711,District of Columbia,2012,77,635342,12.1212,Florida,2012,2597,19352021,13.4213,Georgia,2012,1056,9917639,10.6515,Hawaii,2012,155,1392641,11.1316,Idaho,2012,181,1596097,11.3417,Illinois,2012,1628,12875167,12.6418,Indiana,2012,1011,6538283,15.4619,Iowa,2012,259,3076636,8.4220,Kansas,2012,318,2886281,11.0221,Kentucky,2012,1078,4382667,24.622,Louisiana,2012,566,4603676,12.2923,Maine,2012,150,1328888,11.2924,Maryland,2012,831,5890740,14.1125,Massachusetts,2012,859,6657780,12.926,Michigan,2012,1308,9886879,13.2327,Minnesota,2012,482,5380443,8.9628,Mississippi,2012,310,2985660,10.3829,Missouri,2012,942,6025468,15.6330,Montana,2012,118,1005157,11.7431,Nebraska,2012,146,1855973,7.8732,Nevada,2012,602,2754874,21.8533,New Hampshire,2012,173,1321393,13.0934,New Jersey,2012,1222,8874893,13.7735,New Mexico,2012,492,2084792,23.636,New York,2012,2106,19606981,10.7437,North Carolina,2012,1298,9747021,13.3238,North Dakota,2012,21,702265,2.9939,Ohio,2012,2125,11551783,18.440,Oklahoma,2012,771,3817679,20.241,Oregon,2012,490,3899444,12.5742,Pennsylvania,2012,2365,12772789,18.5244,Rhode Island,2012,196,1052393,18.6245,South Carolina,2012,587,4721341,12.4346,South Dakota,2012,42,834631,5.0347,Tennessee,2012,1131,6455469,17.5248,Texas,2012,2447,26089741,9.3849,Utah,2012,601,2856343,21.0450,Vermont,2012,70,626398,11.1851,Virginia,2012,733,8193374,8.9553,Washington,2012,985,6897292,14.2854,West Virginia,2012,558,1856283,30.0655,Wisconsin,2012,692,5726422,12.0856,Wyoming,2012,98,577080,16.98,,2012,41502,314102623,13.211,Alabama,2013,598,4830533,12.382,Alaska,2013,105,737442,14.244,Arizona,2013,1222,6630799,18.435,Arkansas,2013,319,2957957,10.786,California,2013,4452,38414128,11.598,Colorado,2013,846,5271132,16.059,Connecticut,2013,582,3597168,16.1810,Delaware,2013,166,925353,17.9411,District of Columbia,2013,102,649540,15.712,Florida,2013,2474,19594467,12.6313,Georgia,2013,1098,9991562,10.9915,Hawaii,2013,158,1408765,11.2216,Idaho,2013,207,1612785,12.8317,Illinois,2013,1579,12889580,12.2518,Indiana,2013,1064,6570518,16.1919,Iowa,2013,275,3092224,8.8920,Kansas,2013,331,2894630,11.4321,Kentucky,2013,1019,4398500,23.1722,Louisiana,2013,809,4627491,17.4823,Maine,2013,174,1328778,13.0924,Maryland,2013,892,5936040,15.0325,Massachusetts,2013,1081,6708810,16.1126,Michigan,2013,1553,9900506,15.6927,Minnesota,2013,523,5420541,9.6528,Mississippi,2013,316,2990976,10.5729,Missouri,2013,1025,6043708,16.9630,Montana,2013,137,1014402,13.5131,Nebraska,2013,117,1869300,6.2632,Nevada,2013,614,2790366,2233,New Hampshire,2013,203,1322660,15.3534,New Jersey,2013,1294,8907384,14.5335,New Mexico,2013,458,2086890,21.9536,New York,2013,2309,19691032,11.7337,North Carolina,2013,1259,9845432,12.7938,North Dakota,2013,20,723626,2.7639,Ohio,2013,2347,11572232,20.2840,Oklahoma,2013,790,3853405,20.541,Oregon,2013,455,3928030,11.5842,Pennsylvania,2013,2426,12783536,18.9844,Rhode Island,2013,241,1052856,22.8945,South Carolina,2013,620,4768498,1346,South Dakota,2013,55,845270,6.5147,Tennessee,2013,1187,6496130,18.2748,Texas,2013,2446,26500674,9.2349,Utah,2013,594,2903685,20.4650,Vermont,2013,93,627129,14.8351,Virginia,2013,854,8267875,10.3353,Washington,2013,969,6973281,13.954,West Virginia,2013,570,1852985,30.7655,Wisconsin,2013,856,5743653,14.956,Wyoming,2013,98,583131,16.81,,2013,43982,316427395,13.91,Alabama,2014,723,4846411,14.922,Alaska,2014,124,737046,16.824,Arizona,2014,1211,6728783,185,Arkansas,2014,356,2966835,126,California,2014,4521,38792291,11.658,Colorado,2014,899,5355588,16.799,Connecticut,2014,623,3594762,17.3310,Delaware,2014,189,935968,20.1911,District of Columbia,2014,96,659836,14.5512,Florida,2014,2634,19905569,13.2313,Georgia,2014,1206,10097132,11.9415,Hawaii,2014,157,1420257,11.0516,Idaho,2014,212,1634806,12.9717,Illinois,2014,1705,12882189,13.2418,Indiana,2014,1172,6597880,17.7619,Iowa,2014,264,3109481,8.4920,Kansas,2014,332,2902507,11.4421,Kentucky,2014,1077,4412617,24.4122,Louisiana,2014,777,4648990,16.7123,Maine,2014,216,1330256,16.2424,Maryland,2014,1070,5975346,17.9125,Massachusetts,2014,1289,6755124,19.0826,Michigan,2014,1762,9916306,17.7727,Minnesota,2014,517,5457125,9.4728,Mississippi,2014,336,2993443,11.2229,Missouri,2014,1067,6063827,17.630,Montana,2014,125,1023252,12.2231,Nebraska,2014,125,1882980,6.6432,Nevada,2014,545,2838281,19.233,New Hampshire,2014,334,1327996,25.1534,New Jersey,2014,1253,8938844,14.0235,New Mexico,2014,547,2085567,26.2336,New York,2014,2300,19748858,11.6537,North Carolina,2014,1358,9940387,13.6638,North Dakota,2014,43,740040,5.8139,Ohio,2014,2744,11596998,23.6640,Oklahoma,2014,777,3879610,20.0341,Oregon,2014,522,3971202,13.1442,Pennsylvania,2014,2732,12793767,21.3544,Rhode Island,2014,247,1054907,23.4145,South Carolina,2014,701,4829160,14.5246,South Dakota,2014,63,853304,7.3847,Tennessee,2014,1269,6547779,19.3848,Texas,2014,2601,26979078,9.6449,Utah,2014,603,2944498,20.4850,Vermont,2014,83,626767,13.2451,Virginia,2014,980,8328098,11.7753,Washington,2014,979,7063166,13.8654,West Virginia,2014,627,1848751,33.9155,Wisconsin,2014,853,5759432,14.8156,Wyoming,2014,109,584304,18.65,,2014,47055,318907401,14.76

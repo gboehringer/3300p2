@@ -1,0 +1,178 @@
+<html>
+<head>
+<title>INFO 3300 - Data-driven Web Applications</title>
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://d3js.org/topojson.v2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+</head>
+<style>
+svg { border: solid #ccc 1px; }
+.main{
+    width: 100%;
+  }
+.left{
+	width: 60%;
+	float: left;
+}
+.right{
+	width: 40%;
+	float: right;
+}
+
+</style>
+<body>
+<div class = "main">
+	<div class = "left">
+	<svg id = "map" width = "700" height = "500"></svg>
+	</div>
+	<div class = "right">
+	<p id = "educ"></p>
+	<button type="button" onclick="plotEduc();">Show All</button>
+	</div>
+</div>
+
+
+
+<script>
+var height = 400;
+var width = 450;
+var padding = 10;
+
+var svg = d3.select("#educ").append("svg")
+.attr("height", height + 2 * padding)
+.attr("width", width + 2 * padding)
+.attr("id", "linegraph");
+
+var educ_attain = {};
+var edu_array, states, xScale, yScale, paths;
+var projection = d3.geoAlbersUsa().scale(75);
+var pathGenerator = d3.geoPath().projection(projection);
+var max_attain = 54.8;
+
+var buildPath = function(d, xScale, yScale){
+	var res = "M " + xScale(2000) + ' ' + yScale(d[2000]) + ' L ';
+	for (var i = 2001; i < 2015; i++){
+		res += " " + xScale(i) + " " + yScale(d[i] + " ");
+	}
+	return res;	
+}
+
+var plotEduc = function(){
+	paths = svg.selectAll("path").data(edu_array);
+	//console.log(buildPath(educ_attain[0], xScale, yScale));
+	paths = paths.enter().append("path")
+	.attr("d", function (d) {return buildPath(d, xScale, yScale);})
+	.attr("fill", "none")
+	.attr("stroke", "#D3D3D3")
+	.attr("stroke-width", 1)
+	.attr("opacity", 1)
+	.attr("id", function(d){return d.state})
+	.merge(paths);
+};
+
+var showState = function(st){
+	var svg = d3.select("#linegraph");
+	svg.append("path")
+	.attr("d", buildPath(educ_attain[st], xScale, yScale))
+	.attr("fill", "none")
+	.attr("stroke", "#D3D3D3")
+	.attr("stroke-width", 1)
+	.attr("opacity", 1)
+	.attr("id", educ_attain[st].state);
+	
+}
+
+d3.csv("educattain.csv", function (error, data) {
+	if (error) { console.log(error); }
+	for (i in data){
+		if (data[i].FIPS != "" && data[i].FIPS){
+			educ_attain[data[i].FIPS] = {
+			"state": data[i].state,
+			"2000": data[i]["2000"],
+			"2001": data[i]["2001"],
+			"2002": data[i]["2002"],
+			"2003": data[i]["2003"],
+			"2004": data[i]["2004"],
+			"2005": data[i]["2005"],
+			"2006": data[i]["2006"],
+			"2007": data[i]["2007"],
+			"2008": data[i]["2008"],
+			"2009": data[i]["2009"],
+			"2010": data[i]["2010"],
+			"2011": data[i]["2011"],
+			"2012": data[i]["2012"],
+			"2013": data[i]["2013"],
+			"2014": data[i]["2014"]
+			}; 
+		}
+	}
+	edu_array = data;
+	xScale = d3.scaleLinear().domain([2000, 2014]).range([padding*2+5, width-padding]);
+	yScale = d3.scaleLinear().domain([max_attain, 0]).range([padding, height-padding]);
+
+	var xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
+	var yAxis = d3.axisLeft(yScale);
+	svg.append("g").attr("transform", "translate(0,390)").call(xAxis);
+	svg.append("g").attr("transform", "translate(25,0)").call(yAxis);
+
+	//Horizontal Dotted Lines
+	var y = 0;
+	while(y <= 55){
+		svg.append("line")
+		.attr("x1", xScale(2000))
+		.attr("y1", yScale(y))
+		.attr("x2", xScale(2014))
+		.attr("y2", yScale(y))
+		.attr("stroke-width", 1)
+		.attr("stroke", "black")
+		.attr("stroke-dasharray", "5, 10")
+		.attr("opacity", "0.2");
+		y += 5;
+	}
+	//plotEduc();
+});
+
+//MAP STUFF
+d3.queue()
+.defer(d3.json, "us.json")
+.await(function (error, rawMap) {
+	states = topojson.feature(rawMap, rawMap.objects.states);
+	showMap("#map");
+
+});
+
+function showMap(placement) {
+	var svg = d3.select(placement);
+	projection.fitExtent([[0,0], [svg.attr("width"), svg.attr("height")]], states);
+	pathGenerator = d3.geoPath().projection(projection);
+	
+	var paths = svg.selectAll("path.state").data(states.features);
+	paths.enter().append("path").attr("class", "state")
+	.attr("id", function(state){
+		return state.id;
+	})
+	.merge(paths)
+	.transition().duration(1000)
+	.style("stroke", "white")
+	.style("fill", "grey")
+	.attr("d", function (state) {
+		return pathGenerator(state);
+	})
+	.attr("onclick", function(state){
+		return "showState("+state.id+");";
+	});
+}
+
+()
+</script>
+
+
+
+
+</body>
+</html>
