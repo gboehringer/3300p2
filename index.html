@@ -12,6 +12,29 @@
 </head>
 <style>
 svg { border: solid #ccc 1px; }
+
+input[type=range] {
+    -webkit-appearance: none;
+    background-color: silver;
+    width: 700px;
+    height:5px;
+    outline: none;
+}
+
+
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: blue;
+
+
+}
+
+
 .main{
     width: 100%;
   }
@@ -44,14 +67,27 @@ svg { border: solid #ccc 1px; }
 
 
 <script>
+
+
+
+
+
 var height = 400;
 var width = 450;
 var padding = 10;
 
-//dictionary relating to slider
+//dictionary relating to slider 
 var yearedu = {};
-//data for drugs in a specific year
+//data for drugs 
 var drugs;
+//data for drugs in a specefic year
+var drugyear = [];
+//value for current state
+var currstate = "Alabama";
+//array for sorted drug
+var sorteddrug = {};
+//array for sorted edu
+var sortededu = {};
 
 var svg = d3.select("#educ").append("svg")
 .attr("height", height + 2 * padding)
@@ -119,19 +155,62 @@ var updateeduc = function(year){
 
 };
 
-var updatetool = function(state){
 
-    d3.selectAll(".")
+var updatetoolstate = function(state){
+    currstate = educ_attain[state].state;
+    d3.selectAll(".toolstate")
+    .text(educ_attain[state].state);
 
-    d3.selectAll(".")
+    d3.selectAll(".tooledurank")
+    .text(sortededu[currstate] + "");
 
-    d3.selectAll(".")
+    d3.selectAll(".tooldrugrank")
+    .text(sorteddrug[currstate] + "");
 
-    d3.selectAll(".")
+    d3.selectAll(".tooleduperc")
+    .text("" + yearedu[educ_attain[state].state]);
 
-    d3.selectAll(".")
+    d3.selectAll(".tooldrugperc")
+    .text(function(){
+        var a;
+        drugyear.forEach(function(d){
+            if(d.State == educ_attain[state].state){
+                a = d.CrudeRate + "";
+            }
+        })
+        return a;
+    });
 
-    d3.selectAll(".")
+};
+
+
+
+var updatetoolyear = function(year){
+
+    d3.selectAll(".toolyear")
+    .text(year);
+
+    d3.selectAll(".tooleduperc")
+    .text("" + yearedu[currstate]);
+
+    d3.selectAll(".tooldrugperc")
+    .text(function(){
+        var a;
+        drugyear.forEach(function(d){
+            if(d.State == currstate){
+                a = d.CrudeRate + "";
+            }
+        })
+        return a;
+    });
+
+    d3.selectAll(".tooledurank")
+    .text(sortededu[currstate] + "");
+
+    d3.selectAll(".tooldrugrank")
+    .text(sorteddrug[currstate] + "");
+
+
 }
 
 d3.csv("educattain.csv", function (error, data) {
@@ -209,6 +288,31 @@ d3.queue()
 	console.log(Math.log(d3.max(rate_Arr)));
 	showMap(rateScale, "#map");
 	createTool();
+
+
+    //create initial values for yearedu and drugs
+    edu_array.forEach(function(d){
+        if(d.state == "United States"){
+            ;
+        }
+        else{
+
+            yearedu[d.state] = d["2000"]; 
+        }
+    });
+
+    
+    drugs.forEach(function(d) {
+    if(d.Year == "2000"){
+        drugyear.push(d);
+    }
+    
+    });
+
+    sortDrug();
+    sortEdu();
+
+
 });
 
 function showMap(scale, placement) {
@@ -236,19 +340,21 @@ function showMap(scale, placement) {
 		return pathGenerator(state);
 	})
 	.attr("onclick", function(state){
-		return "showState("+state.id+");";
+		return "showState("+state.id+");" + "updatetoolstate(" + state.id + ");";
+
 	});
+
 }
 
   //slider stuff
 function showValue(newValue)
 {
-	year = []
+	drugyear = []
 	document.getElementById("range").innerHTML=newValue;
 
 	drugs.forEach(function(d) {
 		if(d.Year == newValue){
-			year.push(d);
+			drugyear.push(d);
 		}
   	
 	});
@@ -266,7 +372,15 @@ function showValue(newValue)
         }
     });
 
+
+
+
     updateeduc(newValue);
+    updatetoolyear(newValue);
+    sortEdu();
+    sortDrug();
+
+
 
 }
 
@@ -302,7 +416,7 @@ function createTool(){
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("Georgia")
+    .text("Alabama")
     .attr("class", "toolstate");
 
     svg2.append("text")
@@ -319,7 +433,7 @@ function createTool(){
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("2001")
+    .text("2000")
     .attr("class", "toolyear");
 
      svg2.append("text")
@@ -336,7 +450,7 @@ function createTool(){
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("3")
+    .text("46")
     .attr("class", "tooledurank");
 
 
@@ -354,7 +468,7 @@ function createTool(){
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .text("2")
+    .text("42")
     .attr("class", "tooldrugrank");
 
 
@@ -372,8 +486,8 @@ function createTool(){
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
     .attr("font-size", 20)
-    .attr("fill", "red")
-    .text("20" + "%")
+    .attr("fill", "black")
+    .text("19")
     .attr("class", "tooleduperc");
 
      svg2.append("text")
@@ -389,9 +503,9 @@ function createTool(){
     .attr("y", 5* height2 /6)
     .attr("text-anchor", "middle")
     .attr("font-weight", "normal")
-    .attr("fill", "orange")
+    .attr("fill", "black")
     .attr("font-size", 20)
-    .text("20" + "%")
+    .text("4.43")
     .attr("class", "tooldrugperc");
 
 
@@ -441,6 +555,69 @@ function createTool(){
 
 
 }
+var values;
+function sortEdu(){
+
+
+    values = [];
+    for( var key in yearedu){
+        values.push(yearedu[key]);
+    }
+
+    values.sort(function(a,b){
+        return a-b;
+    });
+    var counter = 1;
+    for( var i = values.length; i > -1; i--){
+        for(var key in yearedu){
+            if(values[i] == yearedu[key]){
+                sortededu[key] = counter;
+            }
+
+        }
+        counter++;
+    }
+
+
+}
+
+
+function sortDrug(){
+
+    temparray = {};
+    drugyear.forEach(function(d){
+        if(d.State == ""){
+            ;
+        }
+        else{
+        temparray[d.State] = d.CrudeRate;
+        }
+    });
+    values = [];
+    for( var key in temparray){
+        values.push(temparray[key]);
+    }
+
+    values.sort(function(a,b){
+        return a-b;
+    });
+    var counter = 1;
+    for( var i = values.length; i > -1; i--){
+        drugyear.forEach(function(d){
+            if(values[i] == d.CrudeRate){
+                sorteddrug[d.State] = counter;
+            }
+
+        });
+        counter++;
+    }
+
+
+}
+
+
+
+
 </script>
 
 
