@@ -4,6 +4,7 @@
 <link href="https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -11,40 +12,24 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 </head>
 <style>
-svg { border: solid #ccc 1px; }
-
-input[type=range] {
-    -webkit-appearance: none;
-    background-color: silver;
-    width: 700px;
-    height:5px;
-    outline: none;
-}
-
-
-
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: blue;
-
-
-}
-
-
+/*svg { border: solid #ccc 1px; }*/
 .main{
     width: 100%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
   }
 .left{
-	width: 60%;
+	width: 55%;
 	float: left;
+	margin-top: 50px;
 }
 .right{
-	width: 40%;
+	width: 45%;
 	float: right;
+}
+
+#slider{
+	width: 70%;
 }
 
 </style>
@@ -56,32 +41,28 @@ input[type=range]::-webkit-slider-thumb {
 	<div class = "right">
 	<p id = "educ"></p>
 	<button type="button" onclick="plotEduc();">Show All</button>
+	<button type="button" onclick="cle();">Clear</button>
+	<br><br>
 	</div>
+	<input id = "slider" type="range" min="2000" max="2014" value="2000" step="1" oninput="showValue(this.value)" />
+	<span id="range">2000</span>
+	<p id = "tooltip"></p>
 </div>
 
-<input type="range" min="2000" max="2014" value="2000" step="1" oninput="showValue(this.value)" />
-<span id="range">2000</span>
-
-<p id = "tooltip"></p>
 
 
 
 <script>
-
-
-
-
-
-var height = 400;
+var height = 550;
 var width = 450;
 var padding = 10;
 
-//dictionary relating to slider 
+//dictionary relating to slider
 var yearedu = {};
-//data for drugs 
-var drugs;
 //data for drugs in a specefic year
 var drugyear = [];
+//data for drugs in a specific year
+var drugs;
 //value for current state
 var currstate = "Alabama";
 //array for sorted drug
@@ -89,17 +70,22 @@ var sorteddrug = {};
 //array for sorted edu
 var sortededu = {};
 
+//For educ chart
+var educ_attain = {};
+var edu_array, states, xScale, yScale, allPaths, allCircles, paths;
+var max_attain = 54.8;
+var stateFips = {};
+
+var projection = d3.geoAlbersUsa().scale(75);
+var pathGenerator = d3.geoPath().projection(projection);
+var rateScale;
+
 var svg = d3.select("#educ").append("svg")
 .attr("height", height + 2 * padding)
 .attr("width", width + 2 * padding)
 .attr("id", "linegraph");
 
-var educ_attain = {};
-var edu_array, states, xScale, yScale, paths;
-var projection = d3.geoAlbersUsa().scale(75);
-var pathGenerator = d3.geoPath().projection(projection);
-var max_attain = 54.8;
-
+//Build Paths of Education lines in chart
 var buildPath = function(d, xScale, yScale){
 	var res = "M " + xScale(2000) + ' ' + yScale(d[2000]) + ' L ';
 	for (var i = 2001; i < 2015; i++){
@@ -110,51 +96,137 @@ var buildPath = function(d, xScale, yScale){
 
 //Show all lines
 var plotEduc = function(){
-	paths = svg.selectAll("path").data(edu_array);
+	allPaths = svg.selectAll("path").data(edu_array);
 	//console.log(buildPath(educ_attain[0], xScale, yScale));
-	paths = paths.enter().append("path")
+	allPaths = allPaths.enter().append("path")
 	.attr("d", function (d) {return buildPath(d, xScale, yScale);})
 	.attr("fill", "none")
 	.attr("stroke", "#D3D3D3")
-	.attr("stroke-width", 1)
+	.attr("stroke-width", 2)
 	.attr("opacity", 1)
-	.attr("id", function(d){return d.state})
-	.merge(paths);
+	.attr("class", "all")
+	.attr("id", function(d){return d.state.replace(/ /g,'');})
+	.merge(allPaths);
+
+	var points = [];
+	for (i in edu_array){
+		for (var j = 2000; j < 2015; j++){
+				if (edu_array[i][j]){
+					points.push({
+					"year": j,
+					"val": edu_array[i][j],
+					"state": edu_array[i].state
+					});
+				}
+				
+		}
+	}
+	d3.selection.prototype.moveToFront = function() {  
+      return this.each(function(){
+        this.parentNode.appendChild(this);
+      });
+    };
+
+	allCircles = svg.selectAll("circle").data(points);
+	allCircles = allCircles.enter().append("circle")
+	.attr("class", "yearPt")
+	.attr("cx", function(d){return xScale(d.year);})
+	.attr("cy", function(d){if (!d.val) {console.log(d);} return yScale(d.val);})
+	.attr("r", 2.4)
+	.attr("fill", "#D3D3D3")
+	.on("mouseover", function(d){
+		svg.select("#temp").text(d.year + " " + d.state + " " + d.val + "%");
+		d3.select("#"+d.state.replace(/ /g,'')).attr("stroke-width", 5).attr("stroke", "#FF7F50").moveToFront();
+		d3.select(this).attr("r", 6).attr("fill", "#FF7F50").moveToFront();
+
+		var f = stateFips[d.state];
+		d3.selectAll("#f" + f.replace(/ /g,'')+".state").attr("opacity", 0.0);
+		updatetoolstate(stateFips[d.state]);
+	})
+	.on("mouseout", function(d){
+		d3.select(this).attr("r", 2.4).attr("fill", "#D3D3D3");
+		d3.select("#"+d.state.replace(/ /g,'')).attr("stroke-width", 2.9).attr("stroke", "#D3D3D3");
+
+		var f = stateFips[d.state];
+		var statesDat = stateAt.get(f);
+		d3.select("#f" + f.replace(/ /g,'')+".state").attr("fill", rateScale(statesDat.CrudeRate)).attr("opacity", 1);
+	})
+	.merge(allCircles);	
+};
+
+
+//Clear all lines
+var cle = function(){
+	svg.selectAll("path").remove();
+	svg.selectAll("circle").remove();
+	var xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
+	var yAxis = d3.axisLeft(yScale);
+	svg.append("g").attr("transform", "translate(0,540)").call(xAxis);
+	svg.append("g").attr("transform", "translate(25,0)").call(yAxis);
 };
 
 //Show 1 line
 var showState = function(st){
 	var svg = d3.select("#linegraph");
 	svg.append("path")
+	.attr("id", educ_attain[st].state.replace(/ /g,''))
 	.attr("d", buildPath(educ_attain[st], xScale, yScale))
 	.attr("fill", "none")
 	.attr("stroke", "#D3D3D3")
-	.attr("stroke-width", 1)
-	.attr("opacity", 1)
-	.attr("id", educ_attain[st].state);
+	.attr("stroke-width", 2)
+	.attr("opacity", 1);
+	//.attr("id", educ_attain[st].state);
 
-	var line1 = 
-    svg.append("line")
-    .attr("x1", xScale(2000))
-    .attr("y1", padding)
-    .attr("x2", xScale(2000))
-    .attr("y2", height)
-    .attr("stroke-width", 1)
-    .attr("stroke", "blue")
-    .attr("opacity", "0.2")
-    .attr("class", "line2");
+	var attach= [];
+	for (var i = 2000; i < 2015; i++){
+		attach.push({
+			"state": educ_attain[st].state,
+			"year": i,
+			"val": educ_attain[st][i]
+		});
+	}
+	d3.selection.prototype.moveToFront = function() {  
+      return this.each(function(){
+        this.parentNode.appendChild(this);
+      });
+    };
+
+	var stateCircles = svg.selectAll(".\\"+educ_attain[st].state).data(attach); 
+	stateCircles.enter().append("circle")
+	.attr("class", function(d){return d["state"];})
+	.attr("cx", function(d){return xScale(d["year"])})
+	.attr("cy", function(d){return yScale(d["val"])})
+	.attr("r", 2.4)
+	.attr("fill", "#D3D3D3")
+	.on("mouseover", function(d){
+		//Hightline Line and Circles
+		svg.select("#temp").text(d.year + " " + d.state + " " + d.val + "%");
+		d3.select("#"+d.state.replace(/ /g,'')).attr("stroke-width", 5).attr("stroke", "#FF7F50").moveToFront();
+		d3.select(this).attr("r", 6).attr("fill", "#FF7F50").moveToFront();
+		//Highlight correlating state 
+		var f = stateFips[d.state];
+		d3.selectAll("#f" + f.replace(/ /g,'')+".state").attr("opacity", 0.0);
+		updatetoolstate(stateFips[d.state]);
+	})
+	.on("mouseout", function(d){
+		d3.select(this).attr("r", 2.4).attr("fill", "#D3D3D3");
+		d3.select("#"+d.state.replace(/ /g,'')).attr("stroke-width", 2.9).attr("stroke", "#D3D3D3");
+
+		var f = stateFips[d.state];
+		var statesDat = stateAt.get(f);
+		d3.select("#f" + f.replace(/ /g,'')+".state").attr("fill", rateScale(statesDat.CrudeRate)).attr("opacity", 1);
+	})
+	.merge(stateCircles);
 	
-}
-var updateeduc = function(year){
-
-    var xScale = d3.scaleLinear().domain([2000, 2014]).range([padding*2+5, width-padding]);
-
-    d3.selectAll(".line2")
-    .attr("x1", xScale(year))
-    .attr("x2", xScale(year))
-
 };
 
+//Updates the blue line on chart
+var updateeduc = function(year){
+    var xScale2 = d3.scaleLinear().domain([2000, 2014]).range([padding*2+5, width-padding]);
+    d3.selectAll(".line2")
+    .attr("x1", xScale2(year))
+    .attr("x2", xScale2(year))
+};
 
 var updatetoolstate = function(state){
     currstate = educ_attain[state].state;
@@ -213,8 +285,35 @@ var updatetoolyear = function(year){
 
 }
 
-d3.csv("educattain.csv", function (error, data) {
-	if (error) { console.log(error); }
+//Load all Data
+d3.queue()
+.defer(d3.json, "us.json")
+.defer(d3.csv, "drugs.csv")
+.defer(d3.csv, "educattain.csv")
+.await(function (error, rawMap, rate, data) {
+	if (error) {console.log(error);}
+	//Creating Map Scales
+	drugs = rate;
+	states = topojson.feature(rawMap, rawMap.objects.states);
+	stateAt = d3.map(rate, function(d){
+		return d.FIPS;
+	});
+	
+	var rate_Arr = [];
+	rate.forEach(function(d){
+		rate_Arr.push(Number(d.CrudeRate));
+		return rate_Arr;
+	});
+	
+	//console.log(rate_Arr);
+	var color = ['#e6f2ff','#cce6ff','#99ccff','#66b3ff', '#3399ff', '#0080ff', '#0066cc', '#004080','#00264d', '##000d1a'];
+	rateScale = d3.scaleQuantize().domain([0,d3.max(rate_Arr)])
+		.range(color);
+	//console.log(Math.log(d3.max(rate_Arr)));
+	showMap(rateScale, "#map");
+	createTool();
+
+	//Parsing + Creating Education Scales
 	for (i in data){
 		if (data[i].FIPS != "" && data[i].FIPS){
 			educ_attain[data[i].FIPS] = {
@@ -235,6 +334,7 @@ d3.csv("educattain.csv", function (error, data) {
 			"2013": data[i]["2013"],
 			"2014": data[i]["2014"]
 			}; 
+			stateFips[data[i].state] = data[i].FIPS;
 		}
 	}
 	edu_array = data;
@@ -243,7 +343,7 @@ d3.csv("educattain.csv", function (error, data) {
 
 	var xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
 	var yAxis = d3.axisLeft(yScale);
-	svg.append("g").attr("transform", "translate(0,390)").call(xAxis);
+	svg.append("g").attr("transform", "translate(0,540)").call(xAxis);
 	svg.append("g").attr("transform", "translate(25,0)").call(yAxis);
 
 	//Horizontal Dotted Lines
@@ -260,59 +360,41 @@ d3.csv("educattain.csv", function (error, data) {
 		.attr("opacity", "0.2");
 		y += 5;
 	}
-	//plotEduc();
-});
 
-//MAP STUFF
-d3.queue()
-.defer(d3.json, "us.json")
-.defer(d3.csv, "drugs.csv")
-.await(function (error, rawMap, rate) {
-	if (error) {console.log(error);}
-	drugs = rate;
-	states = topojson.feature(rawMap, rawMap.objects.states);
-	stateAt = d3.map(rate, function(d){
-		return d.FIPS;
-	});
-	
-	var rate_Arr = [];
-	rate.forEach(function(d){
-		rate_Arr.push(Number(d.CrudeRate));
-		return rate_Arr;
-	});
-	
-	console.log(rate_Arr);
-	var color = ['#e6f2ff','#cce6ff','#99ccff','#66b3ff', '#3399ff', '#0080ff', '#0066cc', '#004080','#00264d', '##000d1a'];
-	var rateScale = d3.scaleQuantize().domain([0,d3.max(rate_Arr)])
-		.range(color);
-	console.log(Math.log(d3.max(rate_Arr)));
-	showMap(rateScale, "#map");
-	createTool();
+	//Blue slider line
+	var line1 = svg.append("line")
+    .attr("x1", xScale(2000))
+    .attr("y1", padding)
+    .attr("x2", xScale(2000))
+    .attr("y2", height)
+    .attr("stroke-width", 1.5)
+    .attr("stroke", "blue")
+    .attr("opacity", "0.2")
+    .attr("class", "line2");
+	//Adding in temporary display
+	var svg2 = d3.select("#linegraph");
+	svg2.append("text")
+	.attr("id", "temp")
+	.attr("x", width/2 - 100)
+	.attr("y", height-padding*2)
+	.style("font-size", "14pt");
 
-
-    //create initial values for yearedu and drugs
+	//create initial values for yearedu and drugs
     edu_array.forEach(function(d){
         if(d.state == "United States"){
             ;
         }
         else{
-
             yearedu[d.state] = d["2000"]; 
         }
     });
-
-    
     drugs.forEach(function(d) {
-    if(d.Year == "2000"){
-        drugyear.push(d);
-    }
-    
+	    if(d.Year == "2000"){
+	        drugyear.push(d);
+	    }
     });
-
     sortDrug();
     sortEdu();
-
-
 });
 
 function showMap(scale, placement) {
@@ -323,15 +405,34 @@ function showMap(scale, placement) {
 	var paths = svg.selectAll("path.state").data(states.features);
 	paths.enter().append("path").attr("class", "state")
 	.attr("id", function(state){
-		return state.id;
+		return "f" + state.id;
 	})
 	.merge(paths)
+	.on("mouseover", function(state){
+		d3.select(this).attr("opacity", 0.0);
+		var st = educ_attain[state.id].state;
+		var t = d3.selectAll("#"+st.replace(/ /g,''));
+		console.log(t);
+		if (t){
+			t.attr("stroke-width", 5).attr("stroke", "#FF7F50").moveToFront();
+			d3.selectAll("."+st.replace(/ /g,'')).attr("r", 6).attr("fill", "#FF7F50").moveToFront();
+		}
+		updatetoolstate(state.id);
+	})
+	.on("mouseout", function(state){
+		var statesDat = stateAt.get(state.id);
+		d3.select(this).attr("opacity", 1.0).attr("fill", scale(statesDat.CrudeRate));
+		var st = educ_attain[state.id].state;
+		var t = d3.selectAll("#"+st.replace(/ /g,''));
+		if(t){
+			t.attr("stroke-width", 2.9).attr("stroke", "#D3D3D3");
+			d3.selectAll("."+st.replace(/ /g,'')).attr("r", 2.4).attr("fill", "#D3D3D3");
+		}
+	})
 	.transition().duration(1000)
 	.style("stroke", "white")
 	.style("fill", function (s) {
-		console.log(s.id);
 		var statesDat = stateAt.get(s.id);
-		console.log(statesDat);
 		if(statesDat){
 			return(scale(statesDat.CrudeRate));
 		}
@@ -340,13 +441,11 @@ function showMap(scale, placement) {
 		return pathGenerator(state);
 	})
 	.attr("onclick", function(state){
-		return "showState("+state.id+");" + "updatetoolstate(" + state.id + ");";
-
+		return "showState("+state.id+");";
 	});
-
 }
 
-  //slider stuff
+ //slider stuff
 function showValue(newValue)
 {
 	drugyear = []
@@ -356,34 +455,25 @@ function showValue(newValue)
 		if(d.Year == newValue){
 			drugyear.push(d);
 		}
-  	
 	});
 
-
     yearedu = {};
-
     edu_array.forEach(function(d){
         if(d.state == "United States"){
             ;
         }
         else{
-
             yearedu[d.state] = d[newValue]; 
         }
     });
-
-
-
 
     updateeduc(newValue);
     updatetoolyear(newValue);
     sortEdu();
     sortDrug();
-
-
-
 }
 
+//Tool Tip
 function createTool(){
 	height2 = 75;
 	width2 = 700;
@@ -392,15 +482,13 @@ function createTool(){
 	.attr("height", height2)
 	.attr("width", width2);
 
-
-	   svg2.append("rect")
+	svg2.append("rect")
     .attr("x", 0)
     .attr("y", 0)
     .attr("height", height2/2)
     .attr("width", width2)
     .style("fill", "black")
     .style("fill-opacity", ".3");
-
 
     svg2.append("text")
    	.attr("x", width2 / 8)
@@ -427,7 +515,7 @@ function createTool(){
     .attr("font-size", 20)
     .text("Year");
 
-     svg2.append("text")
+    svg2.append("text")
    	.attr("x", ((0 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", 5 * height2 /6)
     .attr("text-anchor", "middle")
@@ -453,7 +541,6 @@ function createTool(){
     .text("46")
     .attr("class", "tooledurank");
 
-
     svg2.append("text")
    	.attr("x", ((2 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", height2 /3)
@@ -471,8 +558,7 @@ function createTool(){
     .text("42")
     .attr("class", "tooldrugrank");
 
-
-     svg2.append("text")
+    svg2.append("text")
    	.attr("x", ((3 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", height2 /3)
     .attr("text-anchor", "middle")
@@ -480,7 +566,7 @@ function createTool(){
     .attr("font-size", 20)
     .text("Rate");
 
-     svg2.append("text")
+    svg2.append("text")
    	.attr("x", ((3 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", 5* height2 /6)
     .attr("text-anchor", "middle")
@@ -490,7 +576,7 @@ function createTool(){
     .text("19")
     .attr("class", "tooleduperc");
 
-     svg2.append("text")
+    svg2.append("text")
    	.attr("x", ((4 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", height2 /3)
     .attr("text-anchor", "middle")
@@ -498,7 +584,7 @@ function createTool(){
     .attr("font-size", 20)
     .text("Rate");
 
-     svg2.append("text")
+    svg2.append("text")
    	.attr("x", ((4 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
     .attr("y", 5* height2 /6)
     .attr("text-anchor", "middle")
@@ -507,7 +593,6 @@ function createTool(){
     .attr("font-size", 20)
     .text("4.43")
     .attr("class", "tooldrugperc");
-
 
     svg2.append("line")
     .attr("x1", width2/ 4)
@@ -548,22 +633,14 @@ function createTool(){
     .attr("y2", height2)
     .style("stroke", "gray")
     .style("stroke-width", "1");
-
- 
-
-
-
-
 }
+
 var values;
 function sortEdu(){
-
-
     values = [];
     for( var key in yearedu){
         values.push(yearedu[key]);
     }
-
     values.sort(function(a,b){
         return a-b;
     });
@@ -573,24 +650,20 @@ function sortEdu(){
             if(values[i] == yearedu[key]){
                 sortededu[key] = counter;
             }
-
         }
         counter++;
     }
-
-
 }
 
 
 function sortDrug(){
-
     temparray = {};
     drugyear.forEach(function(d){
         if(d.State == ""){
             ;
         }
         else{
-        temparray[d.State] = d.CrudeRate;
+        	temparray[d.State] = d.CrudeRate;
         }
     });
     values = [];
@@ -607,15 +680,10 @@ function sortDrug(){
             if(values[i] == d.CrudeRate){
                 sorteddrug[d.State] = counter;
             }
-
         });
         counter++;
     }
-
-
 }
-
-
 
 
 </script>
