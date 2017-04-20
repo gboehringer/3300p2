@@ -829,7 +829,7 @@ function sortEdu(){
         return a-b;
     });
     var counter = 1;
-    for( var i = values.length; i > -1; i--){
+    for( var i = values.length - 1; i > -1; i--){
         for(var key in yearedu){
             if(values[i] == yearedu[key]){
                 sortededu[key] = counter;
@@ -859,7 +859,7 @@ function sortDrug(){
         return a-b;
     });
     var counter = 1;
-    for( var i = values.length; i > -1; i--){
+    for( var i = values.length - 1; i > -1; i--){
         drugyear.forEach(function(d){
             if(values[i] == d.CrudeRate){
                 sorteddrug[d.State] = counter;
