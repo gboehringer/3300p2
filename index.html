@@ -9,10 +9,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="http://d3js.org/topojson.v2.min.js"></script>
+<script src="http://d3-legend.susielu.com/d3-legend.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 </head>
 <style>
 /*svg { border: solid #ccc 1px; }*/
+#map{
+	/*border-style: solid;*/
+}
 .main{
     width: 100%;
     text-align: center;
@@ -27,7 +31,6 @@
  }
  h1{
  	font-size: 48px;
-
  }
  h2{
  	font-size: 24px;
@@ -36,21 +39,89 @@
  	font-size: 12px;
  }
 .left{
-	width: 50%;
+	width: 55%;
+	height: 750px;
 	float: left;
 	margin-top: 50px;
-	display: inline-block;
+	display: inline;
 	/*border-style: solid;*/
 }
 .right{
 	width: 45%;
+	height: 750px;
 	float: right;
-	display: inline-block;
+	display: inline;
 	/*border-style: solid;*/
+}
+
+#leg {
+    padding: 1.5em 0 0 1.5em;
+}
+
+#leg ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+li.key {
+	display: inline;
+    border-top-width: 20px;
+    border-top-style: solid;
+    font-size: 10px;
+    width: 17%;
+    padding-left: 10;
+    padding-right: 10;
 }
 
 #slider{
 	width: 70%;
+}
+
+.toolTip {
+  animation: false;
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background:  #ffffff;
+  border: 1px solid #000000;
+  padding: 7px;
+  text-align: left;
+  pointer-events: none;
+  font-family: "Raleway";
+}
+
+/*Slider styling help: http://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html*/
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: orange;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
 }
 
 </style>
@@ -59,24 +130,25 @@
 <div class = "main">
 	<div class = "head">
 		<h1> AMERICA: OVERDOSAGE AND COLLEGE DEGREES</h1> 
-		<h4> Come for the education, stay for the drugs. LOL JK </h4>
+		<h4> Lorem ipsum dolor sit amet, consectetur </h4>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lobortis eros ante, feugiat pellentesque arcu vestibulum a. Donec quis elementum magna. Ut sed libero elit. Nunc leo mauris, sagittis ac lorem a, pharetra fringilla ligula. Etiam at elementum arcu, nec dictum nibh. Integer porta, est quis bibendum tincidunt, nibh ipsum egestas quam, vitae blandit justo justo at mi. Aenean et sapien felis. Quisque convallis justo velit, at ornare neque hendrerit sed. Vivamus mauris ipsum, euismod ac tempor nec, venenatis ac diam. Donec gravida felis arcu, vel tempus orci commodo in. 
 	</div>
 	<div class = "left">
-	<h2> Crude Rates of Drug Overdosage in the US </h2>
-	<svg id = "map" width = "700" height = "500"></svg>
+		<h2> Crude Rates of Drug Overdosage in the US </h2>
+		<svg id = "map" width = "700" height = "500"></svg>
+		<div id="leg"></div>
 	</div>
 	<br><br><br>
 	<div class = "right">
-	<h2> % of People with a College Degree </h2>
-	<p id = "educ"></p>
-	<button type="button" onclick="plotEduc();">Show All</button>
-	<button type="button" onclick="cle();">Clear</button>
-	<br><br>
+		<h2> % of People with a College Degree </h2>
+		<p id = "educ"></p>
+		<button type="button" onclick="plotEduc();">Show All</button>
+		<button type="button" onclick="cle();">Clear</button>
+		<br><br>
 	</div>
 	<input id = "slider" type="range" min="2000" max="2014" value="2000" step="1" oninput="showValue(this.value)" />
-	<span id="range">2000</span>
-	<p id = "tooltip"></p>
+	<h2 id="range">2000</h2>
+	<!-- <p id = "tooltip"></p> -->
 </div>
 
 
@@ -86,6 +158,8 @@
 var height = 550;
 var width = 450;
 var padding = 10;
+
+var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
 //dictionary relating to slider
 var yearedu = {};
@@ -127,12 +201,11 @@ var buildPath = function(d, xScale, yScale){
 //Show all lines
 var plotEduc = function(){
 	allPaths = svg.selectAll("path").data(edu_array);
-	//console.log(buildPath(educ_attain[0], xScale, yScale));
 	allPaths = allPaths.enter().append("path")
 	.attr("d", function (d) {return buildPath(d, xScale, yScale);})
 	.attr("fill", "none")
 	.attr("stroke", "#D3D3D3")
-	.attr("stroke-width", 2)
+	.attr("stroke-width", 1.5)
 	.attr("opacity", 1)
 	.attr("class", "all")
 	.attr("id", function(d){return d.state.replace(/ /g,'');})
@@ -161,8 +234,8 @@ var plotEduc = function(){
 	allCircles = allCircles.enter().append("circle")
 	.attr("class", "yearPt")
 	.attr("cx", function(d){return xScale(d.year);})
-	.attr("cy", function(d){if (!d.val) {console.log(d);} return yScale(d.val);})
-	.attr("r", 2.4)
+	.attr("cy", function(d){if (d.val) {return yScale(d.val);}})
+	.attr("r", 3.5)
 	.attr("fill", "#D3D3D3")
 	.on("mouseover", function(d){
 		d3.select("#"+d.state.replace(/ /g,'')).attr("stroke-width", 5).attr("stroke", "orange").moveToFront();
@@ -173,13 +246,14 @@ var plotEduc = function(){
 		updatetoolstate(stateFips[d.state]);
 	})
 	.on("mouseout", function(d){
-		d3.select(this).attr("r", 2.4).attr("fill", "#D3D3D3");
-		d3.select("#"+d.state.replace(/ /g,'')).attr("stroke-width", 2.9).attr("stroke", "#D3D3D3");
+		d3.select(this).attr("r", 3.5).attr("fill", "#D3D3D3");
+		d3.select("#"+d.state.replace(/ /g,'')).attr("stroke-width", 1.5).attr("stroke", "#D3D3D3");
 
 		var f = stateFips[d.state];
 		var statesDat = stateAt.get(f);
 		d3.select("#f" + f.replace(/ /g,'')+".state").style("fill", rateScale(ratearr[stateFips[d.state]]))
 		.attr("opacity", 1);
+		tooltip.style("display", "none");
 	})
 	.merge(allCircles);	
 };
@@ -198,12 +272,17 @@ var cle = function(){
 //Show 1 line
 var showState = function(st){
 	var svg = d3.select("#linegraph");
+
+	//var totalLength = 50;//path.node().getTotalLength();
+
 	svg.append("path")
 	.attr("id", educ_attain[st].state.replace(/ /g,''))
 	.attr("d", buildPath(educ_attain[st], xScale, yScale))
 	.attr("fill", "none")
-	.attr("stroke", "#D3D3D3")
-	.attr("stroke-width", 2)
+	//.attr("stroke", "#D3D3D3")
+	//.attr("stroke-width", 1.5)
+	.attr("stroke-width", 5)
+	.attr("stroke", "orange")
 	.attr("opacity", 1);
 	//.attr("id", educ_attain[st].state);
 
@@ -223,11 +302,12 @@ var showState = function(st){
 
 	var stateCircles = svg.selectAll(".\\"+educ_attain[st].state).data(attach); 
 	stateCircles.enter().append("circle")
-	.attr("class", function(d){return d["state"];})
+	.attr("class", function(d){return d["state"].replace(/ /g,'');})
 	.attr("cx", function(d){return xScale(d["year"])})
 	.attr("cy", function(d){return yScale(d["val"])})
-	.attr("r", 2.4)
-	.attr("fill", "#D3D3D3")
+	// .attr("r", 3.5)
+	// .attr("fill", "#D3D3D3")
+	.attr("r", 6).attr("fill", "orange")
 	.on("mouseover", function(d){
 		//Hightline Line and Circles
 		d3.select("#"+d.state.replace(/ /g,'')).attr("stroke-width", 5).attr("stroke", "orange").moveToFront();
@@ -238,13 +318,14 @@ var showState = function(st){
 		updatetoolstate(stateFips[d.state]);
 	})
 	.on("mouseout", function(d){
-		d3.select(this).attr("r", 2.4).attr("fill", "#D3D3D3");
-		d3.select("#"+d.state.replace(/ /g,'')).attr("stroke-width", 2.9).attr("stroke", "#D3D3D3");
+		d3.select(this).attr("r", 3.5).attr("fill", "#D3D3D3");
+		d3.select("#"+d.state.replace(/ /g,'')).attr("stroke-width", 1.5).attr("stroke", "#D3D3D3");
 
 		var f = stateFips[d.state];
 		var statesDat = stateAt.get(f);
 		d3.select("#f" + f.replace(/ /g,'')+".state").style("fill", rateScale(ratearr[f]))
 		.attr("opacity", 1);
+		tooltip.style("display", "none");
 	})
 	.merge(stateCircles);
 	
@@ -259,7 +340,30 @@ var updateeduc = function(year){
 };
 
 var updatetoolstate = function(state){
-    currstate = educ_attain[state].state;
+        //obtain current state mouse is over
+        currstate = educ_attain[state].state;
+        //obtain drug percent for the state
+        var percent;
+        drugyear.forEach(function(d){
+            if(d.State == educ_attain[state].state){
+                percent = d.CrudeRate;
+            }
+        });
+
+        tooltip.style("left", d3.event.pageX - 50 + "px")
+        .style("top", d3.event.pageY - 92 + "px")
+        .style("display", "inline-block")
+        .html( "<strong> " + (educ_attain[state].state) + ", &nbsp;" + (drugyear[0].Year) +"</strong>"
+         + "<br>" + 
+         "<font size='2'>" + "Drugs: &nbsp;"
+        + "<br>"  + "<font size='1'>" + "Crude Rate: " + "</font>" + 
+        "<strong>" + percent + "%" + "</strong>" + "&emsp;" +  "&nbsp;" + "<font size='1'>" + "Rank: " + "</font>" + "<strong text-align = 'left'>" + sorteddrug[currstate] + "</strong>"
+          + "<br>" + 
+         "<font size='2'>" + "Education: &nbsp;"
+        + "<br>"  + "<font size='1'>" + "Percentage: " + "</font>" + 
+        "<strong>" + yearedu[educ_attain[state].state] + "%" +"</strong>" + "&emsp;" +  "&nbsp;" + "<font size='1'>" + "Rank: " + "</font>" + "<strong text-align = 'left'>" + sortededu[currstate] + "</strong>")
+        ;
+
     d3.selectAll(".toolstate")
     .text(educ_attain[state].state);
 
@@ -361,8 +465,9 @@ d3.queue()
 	for (var key in rate_Arr) {
 	  vals.push(parseInt(rate_Arr[key]));
 	}
-	console.log(vals);
 	var color = ['#e6f2ff','#cce6ff','#99ccff','#66b3ff', '#3399ff', '#0080ff', '#0066cc', '#004080','#00264d', '#000d1a'];
+	// var color = ['#013060', '#134569', '#265A73', '#38707D', '#4B8587', '#5D9A90', '#70B09A', '#82C5A4', '#95DBAE'];
+
 	rateScale = d3.scaleQuantize().domain([0,d3.max(vals)])
 		.range(color);
 	//console.log(Math.log(d3.max(rate_Arr)));
@@ -431,6 +536,26 @@ d3.queue()
     sortEdu();
 });
 
+function column(scale) {
+	var legend = d3.select('#leg')
+
+	var keys = legend.selectAll('li.key')
+		.data(scale.range());
+
+	if (keys){
+		keys.remove();
+	}
+
+	keys.enter().append('li')
+    .attr('class', 'key')
+    .style('border-top-color', String)
+    .text(function(d) {
+        var r = scale.invertExtent(d);
+        return r[0] + " - " + r[1];
+    });
+
+};
+
 function showMap(scale, placement, rate_Arr) {
 	var svg = d3.select(placement);
 	projection.fitExtent([[0,0], [svg.attr("width"), svg.attr("height")]], states);
@@ -440,8 +565,9 @@ function showMap(scale, placement, rate_Arr) {
 	for (var key in rate_Arr) {
 	  vals.push(parseInt(rate_Arr[key]));
 	}
-	console.log(vals);
-	var color = ['#e6f2ff','#cce6ff','#99ccff','#66b3ff', '#3399ff', '#0080ff', '#0066cc', '#004080','#00264d', '#000d1a'];
+	var color = ['#e6f2ff','#cce6ff','#99ccff','#66b3ff', '#3399ff', '#0080ff', '#0066cc', '#004080','#00264d', '#000d1a']; // blues
+	// var color = ['#013060', '#134569', '#265A73', '#38707D', '#4B8587', '#5D9A90', '#70B09A', '#82C5A4', '#95DBAE', 'white']; //green
+
 	rateScale = d3.scaleQuantize().domain([0,d3.max(vals)]).range(color);
 
 	
@@ -458,34 +584,37 @@ function showMap(scale, placement, rate_Arr) {
 
 		var st = educ_attain[state.id].state;
 		var t = d3.selectAll("#"+st.replace(/ /g,''));
-		console.log(t);
 		if (t){
+			try{
 			t.attr("stroke-width", 5).attr("stroke", "orange").moveToFront();
 			d3.selectAll("."+st.replace(/ /g,'')).attr("r", 6).attr("fill", "orange").moveToFront();
+            }
+            catch (e){
+        		;
+            }
 		}
 		updatetoolstate(state.id);
 	})
+	.on("mousemove", function(d){
+        updatetoolstate(d.id);
+    })
 	.on("mouseout", function(state){
 		d3.select(this).attr("opacity", 1.0).style("fill", scale(rate_Arr[state.id]));
 		var st = educ_attain[state.id].state;
 		var t = d3.selectAll("#"+st.replace(/ /g,''));
 		if(t){
-			t.attr("stroke-width", 2.9).attr("stroke", "#D3D3D3");
-			d3.selectAll("."+st.replace(/ /g,'')).attr("r", 2.4).attr("fill", "#D3D3D3");
+			t.attr("stroke-width", 1.5).attr("stroke", "#D3D3D3");
+			d3.selectAll("."+st.replace(/ /g,'')).attr("r", 3.5).attr("fill", "#D3D3D3");
 		}
+		tooltip.style("display", "none");
 	})
 	.transition().duration(1000)
 	.style("stroke", "white")
 	.style("stroke-width", 1.5)
 	.style("fill", function (s) {
-		console.log(rate_Arr[32]);
 		if(rate_Arr[s.id]){
 			return(scale(rate_Arr[s.id]));
 		}
-		// var statesDat = stateAt.get(s.id);
-		// if(statesDat){
-			
-		// }
 	})
 	.attr("d", function (state) {
 		return pathGenerator(state);
@@ -493,6 +622,8 @@ function showMap(scale, placement, rate_Arr) {
 	.attr("onclick", function(state){
 		return "showState("+state.id+");";
 	});
+
+	column(rateScale);
 }
 
  //slider stuff
@@ -520,6 +651,7 @@ function showValue(newValue)
     updatetoolyear(newValue);
     sortEdu();
     sortDrug();
+    column(rateScale);
 
     var rate_Arr = makeRate(newValue);
     showMap(rateScale, "#map", rate_Arr);
