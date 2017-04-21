@@ -95,6 +95,20 @@ li.key {
   font-family: "Raleway";
 }
 
+.toolTips {
+  animation: false;
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background:  #ffffff;
+  padding: 7px;
+  text-align: left;
+  pointer-events: none;
+  font-family: "Raleway";
+}
+
+
 /*Slider styling help: http://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html*/
 input[type=range]{
     -webkit-appearance: none;
@@ -164,7 +178,7 @@ var width = 450;
 var padding = 10;
 
 var tooltip = d3.select("body").append("div").attr("class", "toolTip");
-
+var tooltips = d3.select("body").append("div").attr("class", "toolTips");
 //tracks current year
 var curryear;
 //dictionary relating to slider
@@ -409,8 +423,8 @@ var updatetoolstates = function(state, year){
             }
         });
 
-        tooltip.style("x", 400)
-        .style("y", 50)
+        tooltips.style("left", 965 + "px")
+        .style("top", 835 + "px")
         .style("display", "inline-block")
         .html( "<strong> " + (educ_attain[state].state) + ", &nbsp;" + (year) +"</strong>"
          + "<br>" + 
