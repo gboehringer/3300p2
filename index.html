@@ -146,8 +146,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 <div class = "main">
 	<div class = "head">
 		<h1> AMERICA: OVERDOSAGE AND COLLEGE DEGREES</h1> 
-		<h4> Lorem ipsum dolor sit amet, consectetur </h4>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lobortis eros ante, feugiat pellentesque arcu vestibulum a. Donec quis elementum magna. Ut sed libero elit. Nunc leo mauris, sagittis ac lorem a, pharetra fringilla ligula. Etiam at elementum arcu, nec dictum nibh. Integer porta, est quis bibendum tincidunt, nibh ipsum egestas quam, vitae blandit justo justo at mi. Aenean et sapien felis. Quisque convallis justo velit, at ornare neque hendrerit sed. Vivamus mauris ipsum, euismod ac tempor nec, venenatis ac diam. Donec gravida felis arcu, vel tempus orci commodo in. 
+		<strong>Crude Rate:</strong> Calculated by the total number of drug overdose deaths  during a specific year, divided by the at-risk population multiplied by 100,000. <br>
+		<strong>Education Attainment Rate:</strong> Percent of individuals with a college degree. <br>
+		<strong>Drug Overdose Rank:</strong> A lower rank indicates a higher crude rate.<br>
+		<strong>Education Rank</strong>: A lower rank indicates higher education attainment.
 	</div>
 	<div class = "left" >
 		<h2> Crude Rates of Drug Overdosage in the US </h2>
@@ -287,6 +289,7 @@ var cle = function(){
 	var yAxis = d3.axisLeft(yScale);
 	svg.append("g").attr("transform", "translate(0,540)").call(xAxis);
 	svg.append("g").attr("transform", "translate(25,0)").call(yAxis);
+	tooltips.style("display", "none");
 
 
 };
@@ -381,7 +384,7 @@ var updatetoolstate = function(state){
          + "<br>" + 
          "<font size='2'>" + "Drugs: &nbsp;"
         + "<br>"  + "<font size='1'>" + "Crude Rate: " + "</font>" + 
-        "<strong>" + percent + "%" + "</strong>" + "&emsp;" +  "&nbsp;" + "<font size='1'>" + "Rank: " + "</font>" + "<strong text-align = 'left'>" + sorteddrug[currstate] + "</strong>"
+        "<strong>" + percent + "</strong>" + "&emsp;" +  "&nbsp;" + "<font size='1'>" + "Rank: " + "</font>" + "<strong text-align = 'left'>" + sorteddrug[currstate] + "</strong>"
           + "<br>" + 
          "<font size='2'>" + "Education: &nbsp;"
         + "<br>"  + "<font size='1'>" + "Percentage: " + "</font>" + 
@@ -426,13 +429,13 @@ var updatetoolstates = function(state, year){
         });
 
         tooltips.style("left", 965 + "px")
-        .style("top", 835 + "px")
+        .style("top", 800 + "px")
         .style("display", "inline-block")
         .html( "<strong> " + (educ_attain[state].state) + ", &nbsp;" + (year) +"</strong>"
          + "<br>" + 
          "<font size='2'>" + "Drugs: &nbsp;"
         + "<br>"  + "<font size='1'>" + "Crude Rate: " + "</font>" + 
-        "<strong>" + percent + "%" + "</strong>" + "&emsp;" +  "&nbsp;" + "<font size='1'>" + "Rank: " + "</font>" + "<strong text-align = 'left'>" + sorteddrug[currstate] + "</strong>"
+        "<strong>" + percent + "</strong>" + "&emsp;" +  "&nbsp;" + "<font size='1'>" + "Rank: " + "</font>" + "<strong text-align = 'left'>" + sorteddrug[currstate] + "</strong>"
           + "<br>" + 
          "<font size='2'>" + "Education: &nbsp;"
         + "<br>"  + "<font size='1'>" + "Percentage: " + "</font>" + 
