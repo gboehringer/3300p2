@@ -277,7 +277,7 @@ var plotEduc = function(){
 		var statesDat = stateAt.get(f);
 		d3.select("#f" + f.replace(/ /g,'')+".state").style("fill", rateScale(ratearr[stateFips[d.state]]))
 		.attr("opacity", 1);
-		tooltip.style("display", "none");
+		tooltips.style("display", "none");
 	})
 	.merge(allCircles);	
 };
@@ -354,7 +354,7 @@ var showState = function(st){
 		var statesDat = stateAt.get(f);
 		d3.select("#f" + f.replace(/ /g,'')+".state").style("fill", rateScale(ratearr[f]))
 		.attr("opacity", 1);
-		tooltip.style("display", "none");
+		tooltips.style("display", "none");
 	})
 	.merge(stateCircles);
 	
@@ -428,8 +428,8 @@ var updatetoolstates = function(state, year){
             }
         });
 
-        tooltips.style("left", 965 + "px")
-        .style("top", 1000 + "px")
+        tooltips.style("left", d3.event.pageX - 50 + "px")
+        .style("top", d3.event.pageY - 150+ "px")
         .style("display", "inline-block")
         .html( "<strong> " + (educ_attain[state].state) + ", &nbsp;" + (year) +"</strong>"
          + "<br>" + 
