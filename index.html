@@ -263,7 +263,7 @@ var plotEduc = function(){
 
 		var f = stateFips[d.state];
 		d3.selectAll("#f" + f.replace(/ /g,'')+".state").style("fill", "orange").attr("opacity", 0.5);
-		//updatetoolstates(stateFips[d.state], d.year);
+		updatetoolstates(stateFips[d.state], d.year);
 	})
 	.on("mouseout", function(d){
 		d3.select(this).attr("r", 3.5).attr("fill", "#D3D3D3");
