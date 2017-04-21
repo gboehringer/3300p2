@@ -283,10 +283,12 @@ var plotEduc = function(){
 var cle = function(){
 	svg.selectAll("path").remove();
 	svg.selectAll("circle").remove();
-	var xAxis = d3.axisBottom(xScale).tickFormat(d3.format("%d-%b-%y"));
+	var xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
 	var yAxis = d3.axisLeft(yScale);
 	svg.append("g").attr("transform", "translate(0,540)").call(xAxis);
 	svg.append("g").attr("transform", "translate(25,0)").call(yAxis);
+
+
 };
 
 //Show 1 line
@@ -641,6 +643,7 @@ function showMap(scale, placement, rate_Arr) {
 	})
 	.on("mousemove", function(d){
         updatetoolstate(d.id);
+
     })
 	.on("mouseout", function(state){
 		d3.select(this).attr("opacity", 1.0).style("fill", scale(rate_Arr[state.id]));
@@ -653,8 +656,8 @@ function showMap(scale, placement, rate_Arr) {
 		tooltip.style("display", "none");
 	})
 	.transition().duration(1000)
-	.style("stroke", "white")
 	.style("stroke-width", 1.5)
+	.style("stroke", "white")
 	.style("fill", function (s) {
 		if(rate_Arr[s.id]){
 			return(scale(rate_Arr[s.id]));
@@ -669,6 +672,8 @@ function showMap(scale, placement, rate_Arr) {
 
 	column(rateScale);
 }
+
+
 
  //slider stuff
 function showValue(newValue)
