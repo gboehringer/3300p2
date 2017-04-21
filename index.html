@@ -146,10 +146,12 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 <div class = "main">
 	<div class = "head">
 		<h1> AMERICA: OVERDOSAGE AND COLLEGE DEGREES</h1> 
+		<h4>Could there be a relationship between education attainment and drug usage?</h4>
 		<strong>Crude Rate:</strong> Calculated by the total number of drug overdose deaths  during a specific year, divided by the at-risk population multiplied by 100,000. <br>
 		<strong>Education Attainment Rate:</strong> Percent of individuals with a college degree. <br>
 		<strong>Drug Overdose Rank:</strong> A lower rank indicates a higher crude rate.<br>
-		<strong>Education Rank</strong>: A lower rank indicates higher education attainment.
+		<strong>Education Rank</strong>: A lower rank indicates higher education attainment.<br><br>
+		The importance of education has been continuously increasing in the past decade, especially higher education. The college diploma has become symbolic of success in American society. Does that mean that college graduates feel less of the addiction epidemic that the country is facing? A visualisation of overdose rates by state and education level helps us answer this question. Click around the map to compare your selected states!
 	</div>
 	<div class = "left" >
 		<h2> Crude Rates of Drug Overdosage in the US </h2>
@@ -396,8 +398,6 @@ var updatetoolstate = function(state){
 };
 
 var updatetoolstates = function(state, year){
-
-
 		//update the array for drugs
 		drugyear = []
 		drugs.forEach(function(d) {
@@ -429,7 +429,7 @@ var updatetoolstates = function(state, year){
         });
 
         tooltips.style("left", 965 + "px")
-        .style("top", 800 + "px")
+        .style("top", 1000 + "px")
         .style("display", "inline-block")
         .html( "<strong> " + (educ_attain[state].state) + ", &nbsp;" + (year) +"</strong>"
          + "<br>" + 
