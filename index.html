@@ -13,7 +13,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 </head>
 <style>
-/*svg { border: solid #ccc 1px; }*/
+
+
+
 #map{
 	/*border-style: solid;*/
 }
@@ -40,7 +42,7 @@
  }
 .left{
 	width: 55%;
-	height: 750px;
+	height: 700px;
 	float: left;
 	margin-top: 50px;
 	display: inline;
@@ -48,7 +50,7 @@
 }
 .right{
 	width: 45%;
-	height: 750px;
+	height: 700px;
 	float: right;
 	display: inline;
 	/*border-style: solid;*/
@@ -133,7 +135,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 		<h4> Lorem ipsum dolor sit amet, consectetur </h4>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lobortis eros ante, feugiat pellentesque arcu vestibulum a. Donec quis elementum magna. Ut sed libero elit. Nunc leo mauris, sagittis ac lorem a, pharetra fringilla ligula. Etiam at elementum arcu, nec dictum nibh. Integer porta, est quis bibendum tincidunt, nibh ipsum egestas quam, vitae blandit justo justo at mi. Aenean et sapien felis. Quisque convallis justo velit, at ornare neque hendrerit sed. Vivamus mauris ipsum, euismod ac tempor nec, venenatis ac diam. Donec gravida felis arcu, vel tempus orci commodo in. 
 	</div>
-	<div class = "left">
+	<div class = "left" >
 		<h2> Crude Rates of Drug Overdosage in the US </h2>
 		<svg id = "map" width = "700" height = "500"></svg>
 		<div id="leg"></div>
@@ -146,8 +148,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 		<button type="button" onclick="cle();">Clear</button>
 		<br><br>
 	</div>
+
 	<input id = "slider" type="range" min="2000" max="2014" value="2000" step="1" oninput="showValue(this.value)" />
-	<h2 id="range">2000</h2>
+		<h2 id="range">2000</h2>
+
 	<!-- <p id = "tooltip"></p> -->
 </div>
 
@@ -161,6 +165,8 @@ var padding = 10;
 
 var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
+//tracks current year
+var curryear;
 //dictionary relating to slider
 var yearedu = {};
 //data for drugs in a specefic year
@@ -243,7 +249,7 @@ var plotEduc = function(){
 
 		var f = stateFips[d.state];
 		d3.selectAll("#f" + f.replace(/ /g,'')+".state").style("fill", "orange").attr("opacity", 0.5);
-		updatetoolstate(stateFips[d.state]);
+		//updatetoolstates(stateFips[d.state], d.year);
 	})
 	.on("mouseout", function(d){
 		d3.select(this).attr("r", 3.5).attr("fill", "#D3D3D3");
@@ -263,7 +269,7 @@ var plotEduc = function(){
 var cle = function(){
 	svg.selectAll("path").remove();
 	svg.selectAll("circle").remove();
-	var xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
+	var xAxis = d3.axisBottom(xScale).tickFormat(d3.format("%d-%b-%y"));
 	var yAxis = d3.axisLeft(yScale);
 	svg.append("g").attr("transform", "translate(0,540)").call(xAxis);
 	svg.append("g").attr("transform", "translate(25,0)").call(yAxis);
@@ -315,7 +321,9 @@ var showState = function(st){
 		//Highlight correlating state 
 		var f = stateFips[d.state];
 		d3.selectAll("#f" + f.replace(/ /g,'')+".state").style("fill", "orange").attr("opacity", 0.5);
-		updatetoolstate(stateFips[d.state]);
+
+
+		updatetoolstates(stateFips[d.state], d["year"]);
 	})
 	.on("mouseout", function(d){
 		d3.select(this).attr("r", 3.5).attr("fill", "#D3D3D3");
@@ -364,59 +372,81 @@ var updatetoolstate = function(state){
         "<strong>" + yearedu[educ_attain[state].state] + "%" +"</strong>" + "&emsp;" +  "&nbsp;" + "<font size='1'>" + "Rank: " + "</font>" + "<strong text-align = 'left'>" + sortededu[currstate] + "</strong>")
         ;
 
-    d3.selectAll(".toolstate")
-    .text(educ_attain[state].state);
+    
 
-    d3.selectAll(".tooledurank")
-    .text(sortededu[currstate] + "");
+};
 
-    d3.selectAll(".tooldrugrank")
-    .text(sorteddrug[currstate] + "");
+var updatetoolstates = function(state, year){
 
-    d3.selectAll(".tooleduperc")
-    .text("" + yearedu[educ_attain[state].state]);
 
-    d3.selectAll(".tooldrugperc")
-    .text(function(){
-        var a;
+		//update the array for drugs
+		drugyear = []
+		drugs.forEach(function(d) {
+		if(d.Year == year){
+			drugyear.push(d);
+		}
+		});
+		//update the array for education
+   	 	yearedu = {};
+    	edu_array.forEach(function(d){
+        if(d.state == "United States"){
+            ;
+        }
+        else{
+            yearedu[d.state] = d[year]; 
+        	}
+   	 	});
+    	sortEdu();
+    	sortDrug();
+
+        //obtain current state mouse is over
+        currstate = educ_attain[state].state;
+        //obtain drug percent for the state
+        var percent;
         drugyear.forEach(function(d){
             if(d.State == educ_attain[state].state){
-                a = d.CrudeRate + "";
+                percent = d.CrudeRate;
             }
-        })
-        return a;
-    });
+        });
+
+        tooltip.style("x", 400)
+        .style("y", 50)
+        .style("display", "inline-block")
+        .html( "<strong> " + (educ_attain[state].state) + ", &nbsp;" + (year) +"</strong>"
+         + "<br>" + 
+         "<font size='2'>" + "Drugs: &nbsp;"
+        + "<br>"  + "<font size='1'>" + "Crude Rate: " + "</font>" + 
+        "<strong>" + percent + "%" + "</strong>" + "&emsp;" +  "&nbsp;" + "<font size='1'>" + "Rank: " + "</font>" + "<strong text-align = 'left'>" + sorteddrug[currstate] + "</strong>"
+          + "<br>" + 
+         "<font size='2'>" + "Education: &nbsp;"
+        + "<br>"  + "<font size='1'>" + "Percentage: " + "</font>" + 
+        "<strong>" + yearedu[educ_attain[state].state] + "%" +"</strong>" + "&emsp;" +  "&nbsp;" + "<font size='1'>" + "Rank: " + "</font>" + "<strong text-align = 'left'>" + sortededu[currstate] + "</strong>")
+        ;
+
+        //update the array for drugs
+		drugyear = []
+		drugs.forEach(function(d) {
+		if(d.Year == curryear){
+			drugyear.push(d);
+		}
+		});
+		//update the array for education
+   	 	yearedu = {};
+    	edu_array.forEach(function(d){
+        if(d.state == "United States"){
+            ;
+        }
+        else{
+            yearedu[d.state] = d[curryear]; 
+        	}
+   	 	});
+    	sortEdu();
+    	sortDrug();
+    	
 
 };
 
 
-
-var updatetoolyear = function(year){
-    d3.selectAll(".toolyear")
-    .text(year);
-
-    d3.selectAll(".tooleduperc")
-    .text("" + yearedu[currstate]);
-
-    d3.selectAll(".tooldrugperc")
-    .text(function(){
-        var a;
-        drugyear.forEach(function(d){
-            if(d.State == currstate){
-                a = d.CrudeRate + "";
-            }
-        })
-        return a;
-    });
-
-    d3.selectAll(".tooledurank")
-    .text(sortededu[currstate] + "");
-
-    d3.selectAll(".tooldrugrank")
-    .text(sorteddrug[currstate] + "");
-
-
-}
 
 var makeRate = function(year){
 	var rate_Arr = {};
@@ -435,6 +465,7 @@ d3.queue()
 .defer(d3.csv, "drugs.csv")
 .defer(d3.csv, "educattain.csv")
 .await(function (error, rawMap, rate, data) {
+	curryear = 2000;
 	if (error) {console.log(error);}
 	//Creating Map Scales
 	drugs = rate;
@@ -472,7 +503,6 @@ d3.queue()
 		.range(color);
 	//console.log(Math.log(d3.max(rate_Arr)));
 	showMap(rateScale, "#map", rate_Arr);
-	createTool();
 
 	//Parsing + Creating Education Scales
 	for (i in data){
@@ -526,7 +556,7 @@ d3.queue()
     .attr("x1", xScale(2000))
     .attr("y1", padding)
     .attr("x2", xScale(2000))
-    .attr("y2", height)
+    .attr("y2", height - 10)
     .attr("stroke-width", 2)
     .attr("stroke", "blue")
     .attr("opacity", "0.2")
@@ -629,6 +659,8 @@ function showMap(scale, placement, rate_Arr) {
  //slider stuff
 function showValue(newValue)
 {
+	curryear = newValue;
+	//update the array for drugs
 	drugyear = []
 	document.getElementById("range").innerHTML=newValue;
 	drugs.forEach(function(d) {
@@ -636,7 +668,7 @@ function showValue(newValue)
 			drugyear.push(d);
 		}
 	});
-
+	//update the array for education
     yearedu = {};
     edu_array.forEach(function(d){
         if(d.state == "United States"){
@@ -647,8 +679,7 @@ function showValue(newValue)
         }
     });
 
-    updateeduc(newValue);
-    updatetoolyear(newValue);
+   	updateeduc(newValue);
     sortEdu();
     sortDrug();
     column(rateScale);
@@ -657,170 +688,11 @@ function showValue(newValue)
     showMap(rateScale, "#map", rate_Arr);
 }
 
-//Tool Tip
-function createTool(){
-	height2 = 75;
-	width2 = 700;
 
-	var svg2 = d3.select("#tooltip").append("svg")
-	.attr("height", height2)
-	.attr("width", width2);
-
-	svg2.append("rect")
-    .attr("x", 0)
-    .attr("y", 0)
-    .attr("height", height2/2)
-    .attr("width", width2)
-    .style("fill", "grey")
-    .style("fill-opacity", ".3");
-
-    svg2.append("text")
-   	.attr("x", width2 /8)
-    .attr("y", height2/3)
-    .attr("text-anchor", "middle")
-    .attr("font-weight", "bold")
-    .attr("font-size", 20)
-    .text("State Name");
-
-    svg2.append("text")
-   	.attr("x", width2 / 8)
-    .attr("y", 5 * height2/ 6)
-    .attr("text-anchor", "middle")
-    .attr("font-weight", "normal")
-    .attr("font-size", 20)
-    .text("Alabama")
-    .attr("class", "toolstate");
-
-    svg2.append("text")
-   	.attr("x", ((0 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
-    .attr("y", height2 /3)
-    .attr("text-anchor", "middle")
-    .attr("font-weight", "bold")
-    .attr("font-size", 20)
-    .text("Year");
-
-    svg2.append("text")
-   	.attr("x", ((0 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
-    .attr("y", 5 * height2 /6)
-    .attr("text-anchor", "middle")
-    .attr("font-weight", "normal")
-    .attr("font-size", 20)
-    .text("2000")
-    .attr("class", "toolyear");
-
-     svg2.append("text")
-   	.attr("x", ((1 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
-    .attr("y", height2 /3)
-    .attr("text-anchor", "middle")
-    .attr("font-weight", "bold")
-    .attr("font-size", 20)
-    .text("Rank");
-
-    svg2.append("text")
-   	.attr("x", ((1 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
-    .attr("y",5*  height2 /6)
-    .attr("text-anchor", "middle")
-    .attr("font-weight", "normal")
-    .attr("font-size", 20)
-    .text("46")
-    .attr("class", "tooledurank");
-
-    svg2.append("text")
-   	.attr("x", ((2 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
-    .attr("y", height2 /3)
-    .attr("text-anchor", "middle")
-    .attr("font-weight", "bold")
-    .attr("font-size", 20)
-    .text("Rank");
-
-     svg2.append("text")
-   	.attr("x", ((2 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
-    .attr("y", 5* height2 /6)
-    .attr("text-anchor", "middle")
-    .attr("font-weight", "normal")
-    .attr("font-size", 20)
-    .text("42")
-    .attr("class", "tooldrugrank");
-
-    svg2.append("text")
-   	.attr("x", ((3 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
-    .attr("y", height2 /3)
-    .attr("text-anchor", "middle")
-    .attr("font-weight", "bold")
-    .attr("font-size", 20)
-    .text("Rate");
-
-    svg2.append("text")
-   	.attr("x", ((3 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
-    .attr("y", 5* height2 /6)
-    .attr("text-anchor", "middle")
-    .attr("font-weight", "normal")
-    .attr("font-size", 20)
-    .attr("fill", "black")
-    .text("19")
-    .attr("class", "tooleduperc");
-
-    svg2.append("text")
-   	.attr("x", ((4 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
-    .attr("y", height2 /3)
-    .attr("text-anchor", "middle")
-    .attr("font-weight", "bold")
-    .attr("font-size", 20)
-    .text("Rate");
-
-    svg2.append("text")
-   	.attr("x", ((4 * width2/ 5))* (3/4) + (1/4 * width2) +  ((width2/ 10) * 3/4))
-    .attr("y", 5* height2 /6)
-    .attr("text-anchor", "middle")
-    .attr("font-weight", "normal")
-    .attr("fill", "black")
-    .attr("font-size", 20)
-    .text("4.43")
-    .attr("class", "tooldrugperc");
-
-    svg2.append("line")
-    .attr("x1", width2/ 4)
-    .attr("x2", width2/4)
-    .attr("y1", 0)
-    .attr("y2", height2)
-    .style("stroke", "gray")
-    .style("stroke-width", "1");
-
-     svg2.append("line")
-    .attr("x1", (1 *width2/ 5)*(3/4) +(1/4 * width2) )
-    .attr("x2", (1 *width2/ 5)*(3/4) +(1/4 * width2) )
-    .attr("y1", 0)
-    .attr("y2", height2)
-    .style("stroke", "gray")
-    .style("stroke-width", "1");
-
-    svg2.append("line")
-    .attr("x1", (2 *width2/ 5)*(3/4) +(1/4 * width2) )
-    .attr("x2", (2 *width2/ 5)*(3/4) +(1/4 * width2) )
-    .attr("y1", 0)
-    .attr("y2", height2)
-    .style("stroke", "gray")
-    .style("stroke-width", "1");
-
-    svg2.append("line")
-    .attr("x1", (3 *width2/ 5)*(3/4) +(1/4 * width2) )
-    .attr("x2", (3 *width2/ 5)*(3/4) +(1/4 * width2) )
-    .attr("y1", 0)
-    .attr("y2", height2)
-    .style("stroke", "gray")
-    .style("stroke-width", "1");
-
-     svg2.append("line")
-    .attr("x1", (4 *width2/ 5)*(3/4) +(1/4 * width2) )
-    .attr("x2", (4 *width2/ 5)*(3/4) +(1/4 * width2) )
-    .attr("y1", 0)
-    .attr("y2", height2)
-    .style("stroke", "gray")
-    .style("stroke-width", "1");
-}
 
 var values;
 function sortEdu(){
+	//creates a disctionary of sorted education rates
     values = [];
     for( var key in yearedu){
         values.push(yearedu[key]);
@@ -841,6 +713,7 @@ function sortEdu(){
 
 
 function sortDrug(){
+	//creates a dictionary with sorted drugs
     temparray = {};
     drugyear.forEach(function(d){
         if(d.State == ""){
