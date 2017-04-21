@@ -429,7 +429,7 @@ var updatetoolstates = function(state, year){
         });
 
         tooltips.style("left", d3.event.pageX - 50 + "px")
-        .style("top", d3.event.pageY - 150+ "px")
+        .style("top", d3.event.pageY + 150+ "px")
         .style("display", "inline-block")
         .html( "<strong> " + (educ_attain[state].state) + ", &nbsp;" + (year) +"</strong>"
          + "<br>" + 
